@@ -1,0 +1,4 @@
+content  aerotheme   content/
+skin     aerotheme   classic/1.0  skin/aero/
+
+overlay  chrome://komodo/content/komodo.xul  chrome://aerotheme/content/komodoOverlay.xul
