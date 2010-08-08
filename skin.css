@@ -1,0 +1,100 @@
+#toolbox_main {
+  margin: 0; }
+
+#menubar_main {
+  -moz-appearance: none;
+  background: #d1d6e6 url("background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
+  border-bottom: 1px solid #7e8cb9; }
+  #menubar_main > menu {
+    -moz-appearance: none;
+    margin: 0;
+    border: none;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    padding: 2px 3px; }
+    #menubar_main > menu .menubar-text {
+      color: #414e77; }
+    #menubar_main > menu:first-child {
+      border-left-width: 0; }
+    #menubar_main > menu:hover {
+      background: #e2e5ef url("background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
+      border-color: #c0c7dd; }
+      #menubar_main > menu:hover .menubar-text {
+        color: #262d46; }
+
+#tabbed-view > tabs {
+  -moz-appearance: none;
+  background: #e5e8ea url("background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0; }
+  #tabbed-view > tabs .tabstrip-box {
+    background: transparent url("background-black-line.png?$cache_index") repeat-x 0 100%; }
+    #tabbed-view > tabs .tabstrip-box:not([overflow="true"]) {
+      -moz-padding-start: 0; }
+  #tabbed-view > tabs tab {
+    -moz-appearance: none;
+    background: #e5e8ea;
+    color: #5d6a73;
+    -moz-border-radius: 0;
+    border-top: 3px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: none;
+    border-left: 1px solid transparent;
+    outline: none;
+    margin: 0 0 1px 0;
+    padding: 2px 5px;
+    font-weight: normal;
+    -moz-border-top-colors: #9eaab1;
+    -moz-border-right-colors: #9eaab1;
+    -moz-border-left-colors: #9eaab1; }
+    #tabbed-view > tabs tab {
+      border-right-width: 0;
+      border-left-width: 1px; }
+    #tabbed-view > tabs tab:first-child {
+      border-left-width: 0; }
+    #tabbed-view > tabs tab:last-child {
+      border-right-width: 1px; }
+    #tabbed-view > tabs tab .tab-image-middle .tab-close-button {
+      display: none; }
+    #tabbed-view > tabs tab:hover:not([selected="true"]) {
+      background: #f3f4f5;
+      color: #4c575e;
+      -moz-border-top-colors: #b6a384;
+      -moz-border-right-colors: #9eaab1;
+      -moz-border-left-colors: #9eaab1; }
+    #tabbed-view > tabs tab[selected="true"] {
+      background: white;
+      color: #3b4349;
+      -moz-border-top-colors: #ff9000;
+      -moz-border-right-colors: #9eaab1;
+      -moz-border-left-colors: #9eaab1;
+      margin-bottom: 0;
+      border-bottom: white; }
+      #tabbed-view > tabs tab[selected="true"] .tab-image-middle .tab-close-button {
+        display: block; }
+#tabbed-view > tabpanels {
+  padding-top: 0; }
+  #tabbed-view > tabpanels tabpanel {
+    border-top: none; }
+
+#statusbarviewbox {
+  -moz-appearance: none;
+  background: #e5e8ea url("background-bottom-top-white-gradient.png?$cache_index") repeat-x 0 100%;
+  border: none;
+  border-top: 1px solid #9eaab1; }
+  #statusbarviewbox statusbarpanel {
+    -moz-appearance: none;
+    padding: 0;
+    border: none;
+    border-right: 1px solid #c9cfd3; }
+    #statusbarviewbox statusbarpanel:last-child {
+      border-right-width: 0; }
+    #statusbarviewbox statusbarpanel toolbarbutton {
+      min-width: 36px;
+      padding: 2px 0; }
+      #statusbarviewbox statusbarpanel toolbarbutton .toolbarbutton-text {
+        text-align: center; }
+      #statusbarviewbox statusbarpanel toolbarbutton .toolbarbutton-menu-dropmarker {
+        margin-right: 4px; }
+        #statusbarviewbox statusbarpanel toolbarbutton .toolbarbutton-menu-dropmarker .dropmarker-icon {
+          list-style-image: url("icon-drop-marker.png?$cache_index"); }
+      #statusbarviewbox statusbarpanel toolbarbutton:hover {
+        background: #f3f4f5 url("background-bottom-top-white-gradient.png?$cache_index") repeat-x 0 100%; }

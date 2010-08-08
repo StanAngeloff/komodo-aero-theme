@@ -1,0 +1,162 @@
+$menu_background:   #d1d6e6;
+$threed_background: #e5e8ea;
+$highlight_color:   #ff9000;
+
+$cache_index:       2;
+
+#toolbox_main {
+  margin: 0;
+}
+
+#menubar_main {
+  -moz-appearance: none;
+  background:      $menu_background url('images/background-top-bottom-white-gradient.png?$cache_index') repeat-x 0 0;
+  border-bottom:   1px solid darken($menu_background, 25%);
+
+  & > menu {
+    -moz-appearance: none;
+    margin:          0;
+    border:          none;
+    border-left:     1px solid transparent;
+    border-right:    1px solid transparent;
+    padding:         2px 3px;
+
+    .menubar-text {
+      color: darken($menu_background, 50%);
+    }
+
+    &:first-child {
+      border-left-width: 0;
+    }
+
+    &:hover {
+      background:   lighten($menu_background, 5%) url('images/background-top-bottom-white-gradient.png?$cache_index') repeat-x 0 0;
+      border-color: darken($menu_background, 5%);
+
+      .menubar-text {
+        color: darken($menu_background, 65%);
+      }
+    }
+  }
+}
+
+#tabbed-view {
+
+  & > tabs {
+    -moz-appearance: none;
+    background:      $threed_background url('images/background-top-bottom-white-gradient.png?$cache_index') repeat-x 0 0;
+
+    .tabstrip-box {
+      background: transparent url('images/background-black-line.png?$cache_index') repeat-x 0 100%;
+
+      &:not([overflow="true"]) {
+        -moz-padding-start: 0;
+      }
+    }
+
+    tab {
+      -moz-appearance:     none;
+      background:          $threed_background;
+      color:               darken($threed_background, 50%);
+      -moz-border-radius:  0;
+      border-top:          3px solid transparent;
+      border-right:        1px solid transparent;
+      border-bottom:       none;
+      border-left:         1px solid transparent;
+      outline:             none;
+      margin:              0 0 1px 0;
+      padding:             2px 5px;
+      font-weight:         normal;
+      -moz-border-top-colors:   darken($threed_background, 25%);
+      -moz-border-right-colors: darken($threed_background, 25%);
+      -moz-border-left-colors:  darken($threed_background, 25%);
+
+      & {
+        border-right-width: 0;
+        border-left-width:  1px;
+      }
+      &:first-child {
+        border-left-width: 0;
+      }
+      &:last-child {
+        border-right-width: 1px;
+      }
+
+      .tab-image-middle {
+        .tab-close-button {
+          display: none;
+        }
+      }
+
+      &:hover:not([selected="true"]) {
+        background:               lighten($threed_background, 5%);
+        color:                    darken($threed_background, 57.5%);
+        -moz-border-top-colors:   mix(darken($threed_background, 25%), $highlight_color, 75%);
+        -moz-border-right-colors: darken($threed_background, 25%);
+        -moz-border-left-colors:  darken($threed_background, 25%);
+      }
+
+      &[selected="true"] {
+        background:               lighten($threed_background, 50%);
+        color:                    darken($threed_background, 65%);
+        -moz-border-top-colors:   $highlight_color;
+        -moz-border-right-colors: darken($threed_background, 25%);
+        -moz-border-left-colors:  darken($threed_background, 25%);
+        margin-bottom:            0;
+        border-bottom:            lighten($threed_background, 50%);
+
+        .tab-image-middle {
+          .tab-close-button {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  & > tabpanels {
+    padding-top: 0;
+
+    tabpanel {
+      border-top: none;
+    }
+  }
+}
+
+#statusbarviewbox {
+  -moz-appearance: none;
+  background:      $threed_background url('images/background-bottom-top-white-gradient.png?$cache_index') repeat-x 0 100%;
+  border:          none;
+  border-top:      1px solid darken($threed_background, 25%);
+
+  statusbarpanel {
+    -moz-appearance: none;
+    padding:         0;
+    border:          none;
+    border-right:    1px solid darken($threed_background, 10%);
+
+    &:last-child {
+      border-right-width: 0;
+    }
+
+    toolbarbutton {
+      min-width: 36px;
+      padding:   2px 0;
+
+      .toolbarbutton-text {
+        text-align: center;
+      }
+
+      .toolbarbutton-menu-dropmarker {
+        margin-right: 4px;
+        .dropmarker-icon {
+          list-style-image: url('images/icon-drop-marker.png?$cache_index');
+        }
+      }
+
+      &:hover {
+        background: lighten($threed_background, 5%) url('images/background-bottom-top-white-gradient.png?$cache_index') repeat-x 0 100%;
+      }
+    }
+  }
+}
