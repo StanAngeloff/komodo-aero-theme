@@ -12,36 +12,44 @@ $cache_index:       201008081645;
   margin: 0;
 }
 
-#menubar_main {
+#menubar_main,
+#main-toolboxrow,
+#findToolbar {
   -moz-appearance: none;
   background:      $menu_background url('images/background-top-bottom-white-gradient.png?$cache_index') repeat-x 0 0;
   border-bottom:   1px solid darken($menu_background, 25%);
+}
 
-  & > menu {
-    -moz-appearance: none;
-    margin:          0;
-    border:          none;
-    border-left:     1px solid transparent;
-    border-right:    1px solid transparent;
-    padding:         2px 3px;
+#menubar_main menu,
+#main-toolboxrow > toolbaritem toolbarbutton {
+  -moz-appearance: none;
+  margin:          0;
+  border:          none;
+  border-left:     1px solid transparent;
+  border-right:    1px solid transparent;
+
+  .menubar-text {
+    color: darken($menu_background, 50%);
+  }
+
+  &:first-child {
+    border-left-width: 0;
+  }
+
+  &:hover {
+    background:   lighten($menu_background, 5%) url('images/background-top-bottom-white-gradient.png?$cache_index') repeat-x 0 0;
+    border-color: darken($menu_background, 5%);
 
     .menubar-text {
-      color: darken($menu_background, 50%);
-    }
-
-    &:first-child {
-      border-left-width: 0;
-    }
-
-    &:hover {
-      background:   lighten($menu_background, 5%) url('images/background-top-bottom-white-gradient.png?$cache_index') repeat-x 0 0;
-      border-color: darken($menu_background, 5%);
-
-      .menubar-text {
-        color: darken($menu_background, 65%);
-      }
+      color: darken($menu_background, 65%);
     }
   }
+}
+#menubar_main menu {
+  padding: 2px 3px;
+}
+#main-toolboxrow > toolbaritem > toolbarbutton {
+  padding: 5px 3px;
 }
 
 // SPLITTERS
@@ -77,6 +85,7 @@ $cache_index:       201008081645;
 
 #leftTabBox,
 #rightTabBox,
+#tabbed-view,
 #output_area {
   -moz-appearance: none;
 
@@ -85,7 +94,8 @@ $cache_index:       201008081645;
     border-bottom:   1px solid darken($threed_background, 25%);
     background:      $threed_background url('images/background-top-bottom-white-gradient.png?$cache_index') repeat-x 0 0;
 
-    toolbarbutton {
+    .tabs-select-button,
+    .tabs-closebutton {
       background: $threed_background url('images/background-top-bottom-white-gradient.png?$cache_index') repeat-x 0 0;
       border-top: 1px solid;
       padding:    1px 0;
@@ -93,7 +103,6 @@ $cache_index:       201008081645;
       &:hover {
         background: lighten($threed_background, 5%) url('images/background-top-bottom-white-gradient.png?$cache_index') repeat-x 0 0;
       }
-
     }
 
     .tabs-closebutton {
@@ -265,14 +274,6 @@ $cache_index:       201008081645;
           }
         }
       }
-    }
-  }
-
-  & > tabpanels {
-    padding-top: 0;
-
-    tabpanel {
-      border-top: none;
     }
   }
 }

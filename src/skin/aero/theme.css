@@ -1,26 +1,39 @@
 #toolbox_main {
   margin: 0; }
 
-#menubar_main {
+#menubar_main,
+#main-toolboxrow,
+#findToolbar {
   -moz-appearance: none;
   background: #d1d6e6 url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
   border-bottom: 1px solid #7e8cb9; }
-  #menubar_main > menu {
-    -moz-appearance: none;
-    margin: 0;
-    border: none;
-    border-left: 1px solid transparent;
-    border-right: 1px solid transparent;
-    padding: 2px 3px; }
-    #menubar_main > menu .menubar-text {
-      color: #414e77; }
-    #menubar_main > menu:first-child {
-      border-left-width: 0; }
-    #menubar_main > menu:hover {
-      background: #e2e5ef url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
-      border-color: #c0c7dd; }
-      #menubar_main > menu:hover .menubar-text {
-        color: #262d46; }
+
+#menubar_main menu,
+#main-toolboxrow > toolbaritem toolbarbutton {
+  -moz-appearance: none;
+  margin: 0;
+  border: none;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent; }
+  #menubar_main menu .menubar-text,
+  #main-toolboxrow > toolbaritem toolbarbutton .menubar-text {
+    color: #414e77; }
+  #menubar_main menu:first-child,
+  #main-toolboxrow > toolbaritem toolbarbutton:first-child {
+    border-left-width: 0; }
+  #menubar_main menu:hover,
+  #main-toolboxrow > toolbaritem toolbarbutton:hover {
+    background: #e2e5ef url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
+    border-color: #c0c7dd; }
+    #menubar_main menu:hover .menubar-text,
+    #main-toolboxrow > toolbaritem toolbarbutton:hover .menubar-text {
+      color: #262d46; }
+
+#menubar_main menu {
+  padding: 2px 3px; }
+
+#main-toolboxrow > toolbaritem > toolbarbutton {
+  padding: 5px 3px; }
 
 #bottom_splitter {
   background: #f3f4f5;
@@ -47,56 +60,76 @@
 
 #leftTabBox,
 #rightTabBox,
+#tabbed-view,
 #output_area {
   -moz-appearance: none; }
   #leftTabBox > tabs,
   #rightTabBox > tabs,
+  #tabbed-view > tabs,
   #output_area > tabs {
     -moz-appearance: none;
     border-bottom: 1px solid #9eaab1;
     background: #e5e8ea url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0; }
-    #leftTabBox > tabs toolbarbutton,
-    #rightTabBox > tabs toolbarbutton,
-    #output_area > tabs toolbarbutton {
+    #leftTabBox > tabs .tabs-select-button,
+    #leftTabBox > tabs .tabs-closebutton,
+    #rightTabBox > tabs .tabs-select-button,
+    #rightTabBox > tabs .tabs-closebutton,
+    #tabbed-view > tabs .tabs-select-button,
+    #tabbed-view > tabs .tabs-closebutton,
+    #output_area > tabs .tabs-select-button,
+    #output_area > tabs .tabs-closebutton {
       background: #e5e8ea url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
       border-top: 1px solid;
       padding: 1px 0; }
-      #leftTabBox > tabs toolbarbutton:hover,
-      #rightTabBox > tabs toolbarbutton:hover,
-      #output_area > tabs toolbarbutton:hover {
+      #leftTabBox > tabs .tabs-select-button:hover,
+      #leftTabBox > tabs .tabs-closebutton:hover,
+      #rightTabBox > tabs .tabs-select-button:hover,
+      #rightTabBox > tabs .tabs-closebutton:hover,
+      #tabbed-view > tabs .tabs-select-button:hover,
+      #tabbed-view > tabs .tabs-closebutton:hover,
+      #output_area > tabs .tabs-select-button:hover,
+      #output_area > tabs .tabs-closebutton:hover {
         background: #f3f4f5 url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0; }
     #leftTabBox > tabs .tabs-closebutton,
     #rightTabBox > tabs .tabs-closebutton,
+    #tabbed-view > tabs .tabs-closebutton,
     #output_area > tabs .tabs-closebutton {
       list-style-image: url("images/icon-close.png?$cache_index");
       -moz-image-region: rect(0, 16px, 16px, 0); }
       #leftTabBox > tabs .tabs-closebutton:hover,
       #rightTabBox > tabs .tabs-closebutton:hover,
+      #tabbed-view > tabs .tabs-closebutton:hover,
       #output_area > tabs .tabs-closebutton:hover {
         -moz-image-region: rect(0px, 32px, 16px, 16px); }
         #leftTabBox > tabs .tabs-closebutton:hover:active,
         #rightTabBox > tabs .tabs-closebutton:hover:active,
+        #tabbed-view > tabs .tabs-closebutton:hover:active,
         #output_area > tabs .tabs-closebutton:hover:active {
           -moz-image-region: rect(0px, 48px, 16px, 32px); }
     #leftTabBox > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
     #rightTabBox > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
+    #tabbed-view > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
     #output_area > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon {
       list-style-image: url("images/icon-drop-marker-down.png?$cache_index"); }
   #leftTabBox > tabpanels,
   #rightTabBox > tabpanels,
+  #tabbed-view > tabpanels,
   #output_area > tabpanels {
     padding-top: 0; }
     #leftTabBox > tabpanels tabpanel,
     #rightTabBox > tabpanels tabpanel,
+    #tabbed-view > tabpanels tabpanel,
     #output_area > tabpanels tabpanel {
       background: #f3f4f5;
       border-top: none; }
   #leftTabBox tree treechildren,
   #rightTabBox tree treechildren,
+  #tabbed-view tree treechildren,
   #output_area tree treechildren {
     margin: 1px 0; }
     #leftTabBox tree treechildren::-moz-tree-row,
     #rightTabBox tree treechildren::-moz-tree-row,
+    #tabbed-view tree treechildren::-moz-tree-row,
     #output_area tree treechildren::-moz-tree-row {
       border: 2px solid transparent;
       margin: 0 1px;
@@ -105,6 +138,7 @@
       -moz-border-radius: 3px; }
     #leftTabBox tree treechildren::-moz-tree-row(selected),
     #rightTabBox tree treechildren::-moz-tree-row(selected),
+    #tabbed-view tree treechildren::-moz-tree-row(selected),
     #output_area tree treechildren::-moz-tree-row(selected) {
       background: #f3f4f5 url("images/background-bottom-top-black-gradient.png?$cache_index") repeat-x 0 100%;
       -moz-border-top-colors: #d7dcdf white;
@@ -113,10 +147,12 @@
       -moz-border-left-colors: #d7dcdf #f3f4f5; }
     #leftTabBox tree treechildren::-moz-tree-cell-text(selected),
     #rightTabBox tree treechildren::-moz-tree-cell-text(selected),
+    #tabbed-view tree treechildren::-moz-tree-cell-text(selected),
     #output_area tree treechildren::-moz-tree-cell-text(selected) {
       color: #465057; }
     #leftTabBox tree treechildren::-moz-tree-row(selected focus),
     #rightTabBox tree treechildren::-moz-tree-row(selected focus),
+    #tabbed-view tree treechildren::-moz-tree-row(selected focus),
     #output_area tree treechildren::-moz-tree-row(selected focus) {
       background: #c1dbfc url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
       -moz-border-top-colors: #78b1f8 #f2f7fe;
@@ -125,10 +161,12 @@
       -moz-border-left-colors: #78b1f8 #d9e9fd; }
     #leftTabBox tree treechildren::-moz-tree-cell-text(selected focus),
     #rightTabBox tree treechildren::-moz-tree-cell-text(selected focus),
+    #tabbed-view tree treechildren::-moz-tree-cell-text(selected focus),
     #output_area tree treechildren::-moz-tree-cell-text(selected focus) {
       color: #24292d; }
     #leftTabBox tree treechildren::-moz-tree-row(hover),
     #rightTabBox tree treechildren::-moz-tree-row(hover),
+    #tabbed-view tree treechildren::-moz-tree-row(hover),
     #output_area tree treechildren::-moz-tree-row(hover) {
       background: #f2f7fe url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
       -moz-border-top-colors: #d9e9fd white;
@@ -137,6 +175,7 @@
       -moz-border-left-colors: #d9e9fd #f2f7fe; }
     #leftTabBox tree treechildren::-moz-tree-row(selected hover),
     #rightTabBox tree treechildren::-moz-tree-row(selected hover),
+    #tabbed-view tree treechildren::-moz-tree-row(selected hover),
     #output_area tree treechildren::-moz-tree-row(selected hover) {
       background: #b5d4fb url("images/background-top-bottom-semi-white-gradient.png?$cache_index") repeat-x 0 0;
       -moz-border-top-colors: #78b1f8 #f2f7fe;
@@ -145,10 +184,12 @@
       -moz-border-left-colors: #78b1f8 #d9e9fd; }
     #leftTabBox tree treechildren::-moz-tree-cell-text(selected hover),
     #rightTabBox tree treechildren::-moz-tree-cell-text(selected hover),
+    #tabbed-view tree treechildren::-moz-tree-cell-text(selected hover),
     #output_area tree treechildren::-moz-tree-cell-text(selected hover) {
       color: #24292d; }
     #leftTabBox tree treechildren::-moz-tree-row(selected current focus),
     #rightTabBox tree treechildren::-moz-tree-row(selected current focus),
+    #tabbed-view tree treechildren::-moz-tree-row(selected current focus),
     #output_area tree treechildren::-moz-tree-row(selected current focus) {
       border: 2px solid transparent; }
 
@@ -210,12 +251,6 @@
           #tabbed-view > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover:active,
           #output_area > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover:active {
             -moz-image-region: rect(0px, 48px, 16px, 32px); }
-#tabbed-view > tabpanels,
-#output_area > tabpanels {
-  padding-top: 0; }
-  #tabbed-view > tabpanels tabpanel,
-  #output_area > tabpanels tabpanel {
-    border-top: none; }
 
 #statusbarviewbox {
   -moz-appearance: none;
