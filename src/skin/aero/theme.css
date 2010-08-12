@@ -390,6 +390,9 @@ treechildren#places-files-tree-body::-moz-tree-image(places_folder_closed), imag
 treechildren#places-files-tree-body::-moz-tree-image(places_file) {
   list-style-image: url('images/icon-places-document.png') !important;
 }
+.upfolder-icon {
+  list-style-image: url('images/icon-places-folder-up.png') !important;
+}
 #places-files-tree {
   margin: 0 4px 1px !important;
 }
