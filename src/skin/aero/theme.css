@@ -229,7 +229,7 @@
   border-bottom: 1px solid;
   border-left: 3px solid;
   outline: none;
-  padding: 5px 4px;
+  padding: 5px 4px 5px 0;
   font-weight: normal;
   -moz-border-left-colors: #d7dcdf;
   -moz-border-bottom-colors: #9eaab1;
