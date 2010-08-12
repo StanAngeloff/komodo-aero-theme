@@ -1,0 +1,339 @@
+@menu_background:      #d1d6e6;
+@threed_background:    #e5e8ea;
+@selection_background: #c1dbfc;
+@highlight_color:      #ff9000;
+
+// APP MENU
+// ========
+
+#toolbox_main {
+  margin: 0;
+}
+
+#menubar_main,
+#main-toolboxrow,
+#findToolbar {
+  -moz-appearance: none;
+  background:      @menu_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  border-bottom:   1px solid darken(@menu_background, 25%);
+}
+
+#menubar_main > menu,
+#main-toolboxrow > toolbaritem toolbarbutton {
+  -moz-appearance: none;
+  margin:          0;
+  border:          none;
+  border-left:     1px solid transparent;
+  border-right:    1px solid transparent;
+
+  .menubar-text {
+    color: darken(@menu_background, 50%);
+  }
+
+  &:first-child {
+    border-left-width: 0;
+  }
+
+  &:hover {
+    background:   lighten(@menu_background, 5%) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+    border-color: darken(@menu_background, 5%);
+
+    .menubar-text {
+      color: darken(@menu_background, 65%);
+    }
+  }
+}
+#menubar_main > menu {
+  padding: 2px 3px;
+}
+#main-toolboxrow > toolbaritem > toolbarbutton {
+  padding: 5px 3px;
+}
+
+// SPLITTERS
+// =========
+
+#bottom_splitter {
+  background:                lighten(@threed_background, 5%);
+  border-top:                1px solid;
+  border-bottom:             1px solid;
+  -moz-border-top-colors:    darken(@threed_background, 25%);
+  -moz-border-bottom-colors: darken(@threed_background, 25%);
+  min-height:                5px;
+}
+
+#workspace_left_splitter,
+#workspace_right_splitter {
+  background:   lighten(@threed_background, 5%);
+  border-left:  1px solid;
+  border-right: 1px solid;
+  min-width:    5px;
+}
+#workspace_left_splitter {
+  -moz-border-left-colors:   darken(@threed_background, 25%);
+  -moz-border-right-colors:  darken(@threed_background, 25%);
+}
+#workspace_right_splitter {
+  -moz-border-left-colors:   darken(@threed_background, 25%);
+  -moz-border-right-colors:  darken(@threed_background, 25%);
+}
+
+// LEFT & RIGHT PANES
+// ==================
+
+#leftTabBox,
+#rightTabBox,
+#tabbed-view,
+#output_area {
+  -moz-appearance: none;
+
+  tree {
+    treechildren {
+      margin: 1px 0;
+
+      &::-moz-tree-row {
+        border:             2px solid transparent;
+        margin:             0 1px;
+        min-height:         20px;
+        height:             1.5em;
+        -moz-border-radius: 3px;
+      }
+
+      &::-moz-tree-row(selected) {
+        background:                lighten(@threed_background, 5%) url('images/background-bottom-top-black-gradient.png') repeat-x 0 100%;
+        -moz-border-top-colors:    darken(@threed_background, 5%) lighten(@threed_background, 10%);
+        -moz-border-right-colors:  darken(@threed_background, 5%) lighten(@threed_background, 7.5%);
+        -moz-border-bottom-colors: darken(@threed_background, 5%) lighten(@threed_background, 7.5%);
+        -moz-border-left-colors:   darken(@threed_background, 5%) lighten(@threed_background, 5%);
+      }
+
+      &::-moz-tree-cell-text(selected) {
+        color: darken(@threed_background, 60%);
+      }
+
+      &::-moz-tree-row(selected, focus) {
+        background:                @selection_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+        -moz-border-top-colors:    darken(@selection_background, 15%) lighten(@selection_background, 10%);
+        -moz-border-right-colors:  darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
+        -moz-border-bottom-colors: darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
+        -moz-border-left-colors:   darken(@selection_background, 15%) lighten(@selection_background, 5%);
+      }
+
+      &::-moz-tree-cell-text(selected, focus) {
+        color: darken(@threed_background, 75%);
+      }
+
+      &::-moz-tree-row(hover) {
+        background:                lighten(@selection_background, 10%) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+        -moz-border-top-colors:    lighten(@selection_background, 5%) lighten(@selection_background, 15%);
+        -moz-border-right-colors:  lighten(@selection_background, 5%) lighten(@selection_background, 12.5%);
+        -moz-border-bottom-colors: lighten(@selection_background, 5%) lighten(@selection_background, 12.5%);
+        -moz-border-left-colors:   lighten(@selection_background, 5%) lighten(@selection_background, 10%);
+      }
+
+      &::-moz-tree-row(selected, hover) {
+        background:                darken(@selection_background, 2.5%) url('images/background-top-bottom-semi-white-gradient.png') repeat-x 0 0;
+        -moz-border-top-colors:    darken(@selection_background, 15%) lighten(@selection_background, 10%);
+        -moz-border-right-colors:  darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
+        -moz-border-bottom-colors: darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
+        -moz-border-left-colors:   darken(@selection_background, 15%) lighten(@selection_background, 5%);
+      }
+
+      &::-moz-tree-cell-text(selected, hover) {
+        color: darken(@threed_background, 75%);
+      }
+
+      &::-moz-tree-row(selected, current, focus) {
+        border: 2px solid transparent;
+      }
+    }
+  }
+}
+
+#leftTabBox > tabs,
+#rightTabBox > tabs,
+#tabbed-view > tabs,
+#output_area > tabs {
+  -moz-appearance: none;
+  border-bottom:   1px solid darken(@threed_background, 25%);
+  background:      @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+
+  .tabs-select-button,
+  .tabs-closebutton {
+    background: @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+    border-top: 1px solid;
+    padding:    1px 0;
+
+    &:hover {
+      background: lighten(@threed_background, 5%) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+    }
+  }
+
+  .tabs-closebutton {
+    @sprite_size: 16px;
+
+    list-style-image:  url('images/icon-close.png');
+    -moz-image-region: rect(0, @sprite_size, @sprite_size, 0);
+
+    &:hover {
+      -moz-image-region: rect(0px, @sprite_size * 2, @sprite_size, @sprite_size);
+      &:active {
+        -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2);
+      }
+    }
+  }
+
+  .toolbarbutton-menu-dropmarker {
+    .dropmarker-icon {
+      list-style-image: url('images/icon-drop-marker-down.png');
+    }
+  }
+}
+
+#leftTabBox > tabpanels,
+#rightTabBox > tabpanels,
+#tabbed-view > tabpanels,
+#output_area > tabpanels {
+  padding-top: 0;
+
+  tabpanel {
+    background: lighten(@threed_background, 5%);
+    border-top: none;
+  }
+}
+
+// EDITOR & TABS
+// =============
+
+#tabbed-view > tabs,
+#output_area > tabs {
+  -moz-appearance: none;
+  background:      @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  border-bottom:   none;
+
+  .tabstrip-box {
+    background: transparent url('images/background-black-line.png') repeat-x 0 100%;
+
+    &:not([overflow="true"]) {
+      -moz-padding-start: 0;
+    }
+  }
+
+  tab {
+    -moz-appearance:     none;
+    background:          @threed_background;
+    color:               darken(@threed_background, 50%);
+    -moz-border-radius:  0;
+    border-top:          3px solid;
+    border-right:        1px solid;
+    border-bottom:       none;
+    border-left:         0 solid;
+    outline:             none;
+    margin:              0 0 1px 0;
+    padding:             2px 5px;
+    font-weight:         normal;
+    -moz-border-top-colors:   darken(@threed_background, 25%);
+    -moz-border-right-colors: darken(@threed_background, 25%);
+    -moz-border-left-colors:  darken(@threed_background, 25%);
+
+    .tab-image-middle {
+      .tab-close-button {
+        display: none;
+      }
+    }
+
+    &:hover:not([selected="true"]) {
+      background:               lighten(@threed_background, 5%);
+      color:                    darken(@threed_background, 57.5%);
+      -moz-border-top-colors:   mix(darken(@threed_background, 25%), @highlight_color, 75%);
+      -moz-border-right-colors: darken(@threed_background, 25%);
+      -moz-border-left-colors:  darken(@threed_background, 25%);
+    }
+
+    &[selected="true"] {
+      background:               lighten(@threed_background, 50%);
+      color:                    darken(@threed_background, 65%);
+      -moz-border-top-colors:   @highlight_color;
+      -moz-border-right-colors: darken(@threed_background, 25%);
+      -moz-border-left-colors:  darken(@threed_background, 25%);
+      margin-bottom:            0;
+      border-bottom:            1px solid lighten(@threed_background, 50%);
+
+      .tab-image-middle {
+        .tab-close-button {
+          @sprite_size: 16px;
+
+          display:           block;
+          list-style-image:  url('images/icon-close.png');
+          -moz-image-region: rect(0, @sprite_size, @sprite_size, 0);
+
+          &:hover {
+            -moz-image-region: rect(0px, @sprite_size * 2, @sprite_size, @sprite_size);
+            &:active {
+              -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#statusbarviewbox {
+  -moz-appearance: none;
+  background:      @threed_background url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
+  border:          none;
+  border-top:      1px solid darken(@threed_background, 25%);
+
+  statusbarpanel {
+    -moz-appearance: none;
+    padding:         0;
+    border:          none;
+    border-right:    1px solid darken(@threed_background, 10%);
+
+    &:last-child {
+      border-right-width: 0;
+    }
+
+    toolbarbutton {
+      min-width: 36px;
+      padding:   2px 0;
+
+      .toolbarbutton-text {
+        text-align: center;
+      }
+
+      .toolbarbutton-menu-dropmarker {
+        margin-right: 4px;
+        .dropmarker-icon {
+          list-style-image: url('images/icon-drop-marker-up.png');
+        }
+      }
+
+      &:hover {
+        background: lighten(@threed_background, 5%) url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
+      }
+    }
+  }
+}
+
+// IMAGES
+// ======
+
+treechildren#places-files-tree-body::-moz-tree-image(places_folder_open) {
+  list-style-image: url('images/icon-places-folder-open.png') !important;
+}
+treechildren#places-files-tree-body::-moz-tree-image(places_folder_closed),
+image#place-view-rootPath-icon {
+  list-style-image: url('images/icon-places-folder-closed.png') !important;
+}
+treechildren#places-files-tree-body::-moz-tree-image(places_file) {
+  list-style-image: url('images/icon-places-document.png') !important;
+}
+
+// COMPONENTS
+// ==========
+
+#place-view-vbox {
+  padding-left: 4px;
+}

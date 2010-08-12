@@ -1,290 +1,311 @@
 #toolbox_main {
-  margin: 0; }
-
-#menubar_main,
-#main-toolboxrow,
-#findToolbar {
+  margin: 0;
+}
+#menubar_main, #main-toolboxrow, #findToolbar {
   -moz-appearance: none;
-  background: #d1d6e6 url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
-  border-bottom: 1px solid #7e8cb9; }
-
-#menubar_main menu,
-#main-toolboxrow > toolbaritem toolbarbutton {
+  background: #d1d6e6 url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  border-bottom: 1px solid #7e8cb9;
+}
+#menubar_main > menu, #main-toolboxrow > toolbaritem toolbarbutton {
   -moz-appearance: none;
   margin: 0;
   border: none;
   border-left: 1px solid transparent;
-  border-right: 1px solid transparent; }
-  #menubar_main menu .menubar-text,
-  #main-toolboxrow > toolbaritem toolbarbutton .menubar-text {
-    color: #414e77; }
-  #menubar_main menu:first-child,
-  #main-toolboxrow > toolbaritem toolbarbutton:first-child {
-    border-left-width: 0; }
-  #menubar_main menu:hover,
-  #main-toolboxrow > toolbaritem toolbarbutton:hover {
-    background: #e2e5ef url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
-    border-color: #c0c7dd; }
-    #menubar_main menu:hover .menubar-text,
-    #main-toolboxrow > toolbaritem toolbarbutton:hover .menubar-text {
-      color: #262d46; }
-
-#menubar_main menu {
-  padding: 2px 3px; }
-
+  border-right: 1px solid transparent;
+}
+#menubar_main > menu .menubar-text, #main-toolboxrow > toolbaritem toolbarbutton .menubar-text {
+  color: #414e77;
+}
+#menubar_main > menu:first-child, #main-toolboxrow > toolbaritem toolbarbutton:first-child {
+  border-left-width: 0;
+}
+#menubar_main > menu:hover, #main-toolboxrow > toolbaritem toolbarbutton:hover {
+  background: #e2e5ef url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  border-color: #c0c7dd;
+}
+#menubar_main > menu:hover .menubar-text, #main-toolboxrow > toolbaritem toolbarbutton:hover .menubar-text {
+  color: #262d46;
+}
+#menubar_main > menu {
+  padding: 2px 3px;
+}
 #main-toolboxrow > toolbaritem > toolbarbutton {
-  padding: 5px 3px; }
-
+  padding: 5px 3px;
+}
 #bottom_splitter {
   background: #f3f4f5;
   border-top: 1px solid;
   border-bottom: 1px solid;
   -moz-border-top-colors: #9eaab1;
   -moz-border-bottom-colors: #9eaab1;
-  min-height: 5px; }
-
-#workspace_left_splitter,
-#workspace_right_splitter {
+  min-height: 5px;
+}
+#workspace_left_splitter, #workspace_right_splitter {
   background: #f3f4f5;
   border-left: 1px solid;
   border-right: 1px solid;
-  min-width: 5px; }
-
+  min-width: 5px;
+}
 #workspace_left_splitter {
   -moz-border-left-colors: #9eaab1;
-  -moz-border-right-colors: #9eaab1; }
-
+  -moz-border-right-colors: #9eaab1;
+}
 #workspace_right_splitter {
   -moz-border-left-colors: #9eaab1;
-  -moz-border-right-colors: #9eaab1; }
-
+  -moz-border-right-colors: #9eaab1;
+}
 #leftTabBox,
 #rightTabBox,
 #tabbed-view,
 #output_area {
-  -moz-appearance: none; }
-  #leftTabBox > tabs,
-  #rightTabBox > tabs,
-  #tabbed-view > tabs,
-  #output_area > tabs {
-    -moz-appearance: none;
-    border-bottom: 1px solid #9eaab1;
-    background: #e5e8ea url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0; }
-    #leftTabBox > tabs .tabs-select-button,
-    #leftTabBox > tabs .tabs-closebutton,
-    #rightTabBox > tabs .tabs-select-button,
-    #rightTabBox > tabs .tabs-closebutton,
-    #tabbed-view > tabs .tabs-select-button,
-    #tabbed-view > tabs .tabs-closebutton,
-    #output_area > tabs .tabs-select-button,
-    #output_area > tabs .tabs-closebutton {
-      background: #e5e8ea url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
-      border-top: 1px solid;
-      padding: 1px 0; }
-      #leftTabBox > tabs .tabs-select-button:hover,
-      #leftTabBox > tabs .tabs-closebutton:hover,
-      #rightTabBox > tabs .tabs-select-button:hover,
-      #rightTabBox > tabs .tabs-closebutton:hover,
-      #tabbed-view > tabs .tabs-select-button:hover,
-      #tabbed-view > tabs .tabs-closebutton:hover,
-      #output_area > tabs .tabs-select-button:hover,
-      #output_area > tabs .tabs-closebutton:hover {
-        background: #f3f4f5 url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0; }
-    #leftTabBox > tabs .tabs-closebutton,
-    #rightTabBox > tabs .tabs-closebutton,
-    #tabbed-view > tabs .tabs-closebutton,
-    #output_area > tabs .tabs-closebutton {
-      list-style-image: url("images/icon-close.png?$cache_index");
-      -moz-image-region: rect(0, 16px, 16px, 0); }
-      #leftTabBox > tabs .tabs-closebutton:hover,
-      #rightTabBox > tabs .tabs-closebutton:hover,
-      #tabbed-view > tabs .tabs-closebutton:hover,
-      #output_area > tabs .tabs-closebutton:hover {
-        -moz-image-region: rect(0px, 32px, 16px, 16px); }
-        #leftTabBox > tabs .tabs-closebutton:hover:active,
-        #rightTabBox > tabs .tabs-closebutton:hover:active,
-        #tabbed-view > tabs .tabs-closebutton:hover:active,
-        #output_area > tabs .tabs-closebutton:hover:active {
-          -moz-image-region: rect(0px, 48px, 16px, 32px); }
-    #leftTabBox > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
-    #rightTabBox > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
-    #tabbed-view > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
-    #output_area > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon {
-      list-style-image: url("images/icon-drop-marker-down.png?$cache_index"); }
-  #leftTabBox > tabpanels,
-  #rightTabBox > tabpanels,
-  #tabbed-view > tabpanels,
-  #output_area > tabpanels {
-    padding-top: 0; }
-    #leftTabBox > tabpanels tabpanel,
-    #rightTabBox > tabpanels tabpanel,
-    #tabbed-view > tabpanels tabpanel,
-    #output_area > tabpanels tabpanel {
-      background: #f3f4f5;
-      border-top: none; }
-  #leftTabBox tree treechildren,
-  #rightTabBox tree treechildren,
-  #tabbed-view tree treechildren,
-  #output_area tree treechildren {
-    margin: 1px 0; }
-    #leftTabBox tree treechildren::-moz-tree-row,
-    #rightTabBox tree treechildren::-moz-tree-row,
-    #tabbed-view tree treechildren::-moz-tree-row,
-    #output_area tree treechildren::-moz-tree-row {
-      border: 2px solid transparent;
-      margin: 0 1px;
-      min-height: 20px;
-      height: 1.5em;
-      -moz-border-radius: 3px; }
-    #leftTabBox tree treechildren::-moz-tree-row(selected),
-    #rightTabBox tree treechildren::-moz-tree-row(selected),
-    #tabbed-view tree treechildren::-moz-tree-row(selected),
-    #output_area tree treechildren::-moz-tree-row(selected) {
-      background: #f3f4f5 url("images/background-bottom-top-black-gradient.png?$cache_index") repeat-x 0 100%;
-      -moz-border-top-colors: #d7dcdf white;
-      -moz-border-right-colors: #d7dcdf #fafbfb;
-      -moz-border-bottom-colors: #d7dcdf #fafbfb;
-      -moz-border-left-colors: #d7dcdf #f3f4f5; }
-    #leftTabBox tree treechildren::-moz-tree-cell-text(selected),
-    #rightTabBox tree treechildren::-moz-tree-cell-text(selected),
-    #tabbed-view tree treechildren::-moz-tree-cell-text(selected),
-    #output_area tree treechildren::-moz-tree-cell-text(selected) {
-      color: #465057; }
-    #leftTabBox tree treechildren::-moz-tree-row(selected focus),
-    #rightTabBox tree treechildren::-moz-tree-row(selected focus),
-    #tabbed-view tree treechildren::-moz-tree-row(selected focus),
-    #output_area tree treechildren::-moz-tree-row(selected focus) {
-      background: #c1dbfc url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
-      -moz-border-top-colors: #78b1f8 #f2f7fe;
-      -moz-border-right-colors: #78b1f8 #e5f0fe;
-      -moz-border-bottom-colors: #78b1f8 #e5f0fe;
-      -moz-border-left-colors: #78b1f8 #d9e9fd; }
-    #leftTabBox tree treechildren::-moz-tree-cell-text(selected focus),
-    #rightTabBox tree treechildren::-moz-tree-cell-text(selected focus),
-    #tabbed-view tree treechildren::-moz-tree-cell-text(selected focus),
-    #output_area tree treechildren::-moz-tree-cell-text(selected focus) {
-      color: #24292d; }
-    #leftTabBox tree treechildren::-moz-tree-row(hover),
-    #rightTabBox tree treechildren::-moz-tree-row(hover),
-    #tabbed-view tree treechildren::-moz-tree-row(hover),
-    #output_area tree treechildren::-moz-tree-row(hover) {
-      background: #f2f7fe url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
-      -moz-border-top-colors: #d9e9fd white;
-      -moz-border-right-colors: #d9e9fd #fefeff;
-      -moz-border-bottom-colors: #d9e9fd #fefeff;
-      -moz-border-left-colors: #d9e9fd #f2f7fe; }
-    #leftTabBox tree treechildren::-moz-tree-row(selected hover),
-    #rightTabBox tree treechildren::-moz-tree-row(selected hover),
-    #tabbed-view tree treechildren::-moz-tree-row(selected hover),
-    #output_area tree treechildren::-moz-tree-row(selected hover) {
-      background: #b5d4fb url("images/background-top-bottom-semi-white-gradient.png?$cache_index") repeat-x 0 0;
-      -moz-border-top-colors: #78b1f8 #f2f7fe;
-      -moz-border-right-colors: #78b1f8 #e5f0fe;
-      -moz-border-bottom-colors: #78b1f8 #e5f0fe;
-      -moz-border-left-colors: #78b1f8 #d9e9fd; }
-    #leftTabBox tree treechildren::-moz-tree-cell-text(selected hover),
-    #rightTabBox tree treechildren::-moz-tree-cell-text(selected hover),
-    #tabbed-view tree treechildren::-moz-tree-cell-text(selected hover),
-    #output_area tree treechildren::-moz-tree-cell-text(selected hover) {
-      color: #24292d; }
-    #leftTabBox tree treechildren::-moz-tree-row(selected current focus),
-    #rightTabBox tree treechildren::-moz-tree-row(selected current focus),
-    #tabbed-view tree treechildren::-moz-tree-row(selected current focus),
-    #output_area tree treechildren::-moz-tree-row(selected current focus) {
-      border: 2px solid transparent; }
-
+  -moz-appearance: none;
+}
+#leftTabBox tree treechildren,
+#rightTabBox tree treechildren,
+#tabbed-view tree treechildren,
+#output_area tree treechildren {
+  margin: 1px 0;
+}
+#leftTabBox tree treechildren::-moz-tree-row,
+#rightTabBox tree treechildren::-moz-tree-row,
+#tabbed-view tree treechildren::-moz-tree-row,
+#output_area tree treechildren::-moz-tree-row {
+  border: 2px solid transparent;
+  margin: 0 1px;
+  min-height: 20px;
+  height: 1.5em;
+  -moz-border-radius: 3px;
+}
+#leftTabBox tree treechildren::-moz-tree-row(selected),
+#rightTabBox tree treechildren::-moz-tree-row(selected),
+#tabbed-view tree treechildren::-moz-tree-row(selected),
+#output_area tree treechildren::-moz-tree-row(selected) {
+  background: #f3f4f5 url('images/background-bottom-top-black-gradient.png') repeat-x 0 100%;
+  -moz-border-top-colors: #d7dcdf #ffffff;
+  -moz-border-right-colors: #d7dcdf #fafbfb;
+  -moz-border-bottom-colors: #d7dcdf #fafbfb;
+  -moz-border-left-colors: #d7dcdf #f3f4f5;
+}
+#leftTabBox tree treechildren::-moz-tree-cell-text(selected),
+#rightTabBox tree treechildren::-moz-tree-cell-text(selected),
+#tabbed-view tree treechildren::-moz-tree-cell-text(selected),
+#output_area tree treechildren::-moz-tree-cell-text(selected) {
+  color: #465057;
+}
+#leftTabBox tree treechildren::-moz-tree-row(selected, focus),
+#rightTabBox tree treechildren::-moz-tree-row(selected, focus),
+#tabbed-view tree treechildren::-moz-tree-row(selected, focus),
+#output_area tree treechildren::-moz-tree-row(selected, focus) {
+  background: #c1dbfc url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  -moz-border-top-colors: #78b1f8 #f2f7fe;
+  -moz-border-right-colors: #78b1f8 #e5f0fe;
+  -moz-border-bottom-colors: #78b1f8 #e5f0fe;
+  -moz-border-left-colors: #78b1f8 #d9e9fd;
+}
+#leftTabBox tree treechildren::-moz-tree-cell-text(selected, focus),
+#rightTabBox tree treechildren::-moz-tree-cell-text(selected, focus),
+#tabbed-view tree treechildren::-moz-tree-cell-text(selected, focus),
+#output_area tree treechildren::-moz-tree-cell-text(selected, focus) {
+  color: #24292d;
+}
+#leftTabBox tree treechildren::-moz-tree-row(hover),
+#rightTabBox tree treechildren::-moz-tree-row(hover),
+#tabbed-view tree treechildren::-moz-tree-row(hover),
+#output_area tree treechildren::-moz-tree-row(hover) {
+  background: #f2f7fe url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  -moz-border-top-colors: #d9e9fd #ffffff;
+  -moz-border-right-colors: #d9e9fd #fefeff;
+  -moz-border-bottom-colors: #d9e9fd #fefeff;
+  -moz-border-left-colors: #d9e9fd #f2f7fe;
+}
+#leftTabBox tree treechildren::-moz-tree-row(selected, hover),
+#rightTabBox tree treechildren::-moz-tree-row(selected, hover),
+#tabbed-view tree treechildren::-moz-tree-row(selected, hover),
+#output_area tree treechildren::-moz-tree-row(selected, hover) {
+  background: #b5d4fb url('images/background-top-bottom-semi-white-gradient.png') repeat-x 0 0;
+  -moz-border-top-colors: #78b1f8 #f2f7fe;
+  -moz-border-right-colors: #78b1f8 #e5f0fe;
+  -moz-border-bottom-colors: #78b1f8 #e5f0fe;
+  -moz-border-left-colors: #78b1f8 #d9e9fd;
+}
+#leftTabBox tree treechildren::-moz-tree-cell-text(selected, hover),
+#rightTabBox tree treechildren::-moz-tree-cell-text(selected, hover),
+#tabbed-view tree treechildren::-moz-tree-cell-text(selected, hover),
+#output_area tree treechildren::-moz-tree-cell-text(selected, hover) {
+  color: #24292d;
+}
+#leftTabBox tree treechildren::-moz-tree-row(selected, current, focus),
+#rightTabBox tree treechildren::-moz-tree-row(selected, current, focus),
+#tabbed-view tree treechildren::-moz-tree-row(selected, current, focus),
+#output_area tree treechildren::-moz-tree-row(selected, current, focus) {
+  border: 2px solid transparent;
+}
+#leftTabBox > tabs,
+#rightTabBox > tabs,
 #tabbed-view > tabs,
 #output_area > tabs {
   -moz-appearance: none;
-  background: #e5e8ea url("images/background-top-bottom-white-gradient.png?$cache_index") repeat-x 0 0;
-  border-bottom: none; }
-  #tabbed-view > tabs .tabstrip-box,
-  #output_area > tabs .tabstrip-box {
-    background: transparent url("images/background-black-line.png?$cache_index") repeat-x 0 100%; }
-    #tabbed-view > tabs .tabstrip-box:not([overflow="true"]),
-    #output_area > tabs .tabstrip-box:not([overflow="true"]) {
-      -moz-padding-start: 0; }
-  #tabbed-view > tabs tab,
-  #output_area > tabs tab {
-    -moz-appearance: none;
-    background: #e5e8ea;
-    color: #5d6a73;
-    -moz-border-radius: 0;
-    border-top: 3px solid;
-    border-right: 1px solid;
-    border-bottom: none;
-    border-left: 0 solid;
-    outline: none;
-    margin: 0 0 1px 0;
-    padding: 2px 5px;
-    font-weight: normal;
-    -moz-border-top-colors: #9eaab1;
-    -moz-border-right-colors: #9eaab1;
-    -moz-border-left-colors: #9eaab1; }
-    #tabbed-view > tabs tab .tab-image-middle .tab-close-button,
-    #output_area > tabs tab .tab-image-middle .tab-close-button {
-      display: none; }
-    #tabbed-view > tabs tab:hover:not([selected="true"]),
-    #output_area > tabs tab:hover:not([selected="true"]) {
-      background: #f3f4f5;
-      color: #4c575e;
-      -moz-border-top-colors: #b6a384;
-      -moz-border-right-colors: #9eaab1;
-      -moz-border-left-colors: #9eaab1; }
-    #tabbed-view > tabs tab[selected="true"],
-    #output_area > tabs tab[selected="true"] {
-      background: white;
-      color: #3b4349;
-      -moz-border-top-colors: #ff9000;
-      -moz-border-right-colors: #9eaab1;
-      -moz-border-left-colors: #9eaab1;
-      margin-bottom: 0;
-      border-bottom: 1px solid white; }
-      #tabbed-view > tabs tab[selected="true"] .tab-image-middle .tab-close-button,
-      #output_area > tabs tab[selected="true"] .tab-image-middle .tab-close-button {
-        display: block;
-        list-style-image: url("images/icon-close.png?$cache_index");
-        -moz-image-region: rect(0, 16px, 16px, 0); }
-        #tabbed-view > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover,
-        #output_area > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover {
-          -moz-image-region: rect(0px, 32px, 16px, 16px); }
-          #tabbed-view > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover:active,
-          #output_area > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover:active {
-            -moz-image-region: rect(0px, 48px, 16px, 32px); }
-
+  border-bottom: 1px solid #9eaab1;
+  background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+}
+#leftTabBox > tabs .tabs-select-button,
+#rightTabBox > tabs .tabs-select-button,
+#tabbed-view > tabs .tabs-select-button,
+#output_area > tabs .tabs-select-button,
+#leftTabBox > tabs .tabs-closebutton,
+#rightTabBox > tabs .tabs-closebutton,
+#tabbed-view > tabs .tabs-closebutton,
+#output_area > tabs .tabs-closebutton {
+  background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  border-top: 1px solid;
+  padding: 1px 0;
+}
+#leftTabBox > tabs .tabs-select-button:hover,
+#rightTabBox > tabs .tabs-select-button:hover,
+#tabbed-view > tabs .tabs-select-button:hover,
+#output_area > tabs .tabs-select-button:hover,
+#leftTabBox > tabs .tabs-closebutton:hover,
+#rightTabBox > tabs .tabs-closebutton:hover,
+#tabbed-view > tabs .tabs-closebutton:hover,
+#output_area > tabs .tabs-closebutton:hover {
+  background: #f3f4f5 url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+}
+#leftTabBox > tabs .tabs-closebutton,
+#rightTabBox > tabs .tabs-closebutton,
+#tabbed-view > tabs .tabs-closebutton,
+#output_area > tabs .tabs-closebutton {
+  list-style-image: url('images/icon-close.png');
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+#leftTabBox > tabs .tabs-closebutton:hover,
+#rightTabBox > tabs .tabs-closebutton:hover,
+#tabbed-view > tabs .tabs-closebutton:hover,
+#output_area > tabs .tabs-closebutton:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+#leftTabBox > tabs .tabs-closebutton:hover:active,
+#rightTabBox > tabs .tabs-closebutton:hover:active,
+#tabbed-view > tabs .tabs-closebutton:hover:active,
+#output_area > tabs .tabs-closebutton:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+#leftTabBox > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
+#rightTabBox > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
+#tabbed-view > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
+#output_area > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon {
+  list-style-image: url('images/icon-drop-marker-down.png');
+}
+#leftTabBox > tabpanels,
+#rightTabBox > tabpanels,
+#tabbed-view > tabpanels,
+#output_area > tabpanels {
+  padding-top: 0;
+}
+#leftTabBox > tabpanels tabpanel,
+#rightTabBox > tabpanels tabpanel,
+#tabbed-view > tabpanels tabpanel,
+#output_area > tabpanels tabpanel {
+  background: #f3f4f5;
+  border-top: none;
+}
+#tabbed-view > tabs, #output_area > tabs {
+  -moz-appearance: none;
+  background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  border-bottom: none;
+}
+#tabbed-view > tabs .tabstrip-box, #output_area > tabs .tabstrip-box {
+  background: transparent url('images/background-black-line.png') repeat-x 0 100%;
+}
+#tabbed-view > tabs .tabstrip-box:not([overflow="true"]), #output_area > tabs .tabstrip-box:not([overflow="true"]) {
+  -moz-padding-start: 0;
+}
+#tabbed-view > tabs tab, #output_area > tabs tab {
+  -moz-appearance: none;
+  background: #e5e8ea;
+  color: #5d6a73;
+  -moz-border-radius: 0;
+  border-top: 3px solid;
+  border-right: 1px solid;
+  border-bottom: none;
+  border-left: 0 solid;
+  outline: none;
+  margin: 0 0 1px 0;
+  padding: 2px 5px;
+  font-weight: normal;
+  -moz-border-top-colors: #9eaab1;
+  -moz-border-right-colors: #9eaab1;
+  -moz-border-left-colors: #9eaab1;
+}
+#tabbed-view > tabs tab .tab-image-middle .tab-close-button, #output_area > tabs tab .tab-image-middle .tab-close-button {
+  display: none;
+}
+#tabbed-view > tabs tab:hover:not([selected="true"]), #output_area > tabs tab:hover:not([selected="true"]) {
+  background: #f3f4f5;
+  color: #4c575e;
+  -moz-border-top-colors: mix(#9eaab1, #ff9000, 75%);
+  -moz-border-right-colors: #9eaab1;
+  -moz-border-left-colors: #9eaab1;
+}
+#tabbed-view > tabs tab[selected="true"], #output_area > tabs tab[selected="true"] {
+  background: #ffffff;
+  color: #3b4349;
+  -moz-border-top-colors: #ff9000;
+  -moz-border-right-colors: #9eaab1;
+  -moz-border-left-colors: #9eaab1;
+  margin-bottom: 0;
+  border-bottom: 1px solid #ffffff;
+}
+#tabbed-view > tabs tab[selected="true"] .tab-image-middle .tab-close-button, #output_area > tabs tab[selected="true"] .tab-image-middle .tab-close-button {
+  display: block;
+  list-style-image: url('images/icon-close.png');
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+#tabbed-view > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover, #output_area > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+#tabbed-view > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover:active, #output_area > tabs tab[selected="true"] .tab-image-middle .tab-close-button:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
 #statusbarviewbox {
   -moz-appearance: none;
-  background: #e5e8ea url("images/background-bottom-top-white-gradient.png?$cache_index") repeat-x 0 100%;
+  background: #e5e8ea url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
   border: none;
-  border-top: 1px solid #9eaab1; }
-  #statusbarviewbox statusbarpanel {
-    -moz-appearance: none;
-    padding: 0;
-    border: none;
-    border-right: 1px solid #c9cfd3; }
-    #statusbarviewbox statusbarpanel:last-child {
-      border-right-width: 0; }
-    #statusbarviewbox statusbarpanel toolbarbutton {
-      min-width: 36px;
-      padding: 2px 0; }
-      #statusbarviewbox statusbarpanel toolbarbutton .toolbarbutton-text {
-        text-align: center; }
-      #statusbarviewbox statusbarpanel toolbarbutton .toolbarbutton-menu-dropmarker {
-        margin-right: 4px; }
-        #statusbarviewbox statusbarpanel toolbarbutton .toolbarbutton-menu-dropmarker .dropmarker-icon {
-          list-style-image: url("images/icon-drop-marker-up.png?$cache_index"); }
-      #statusbarviewbox statusbarpanel toolbarbutton:hover {
-        background: #f3f4f5 url("images/background-bottom-top-white-gradient.png?$cache_index") repeat-x 0 100%; }
-
+  border-top: 1px solid #9eaab1;
+}
+#statusbarviewbox statusbarpanel {
+  -moz-appearance: none;
+  padding: 0;
+  border: none;
+  border-right: 1px solid #c9cfd3;
+}
+#statusbarviewbox statusbarpanel:last-child {
+  border-right-width: 0;
+}
+#statusbarviewbox statusbarpanel toolbarbutton {
+  min-width: 36px;
+  padding: 2px 0;
+}
+#statusbarviewbox statusbarpanel toolbarbutton .toolbarbutton-text {
+  text-align: center;
+}
+#statusbarviewbox statusbarpanel toolbarbutton .toolbarbutton-menu-dropmarker {
+  margin-right: 4px;
+}
+#statusbarviewbox statusbarpanel toolbarbutton .toolbarbutton-menu-dropmarker .dropmarker-icon {
+  list-style-image: url('images/icon-drop-marker-up.png');
+}
+#statusbarviewbox statusbarpanel toolbarbutton:hover {
+  background: #f3f4f5 url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
+}
 treechildren#places-files-tree-body::-moz-tree-image(places_folder_open) {
-  list-style-image: url("images/icon-places-folder-open.png?$cache_index") !important; }
-
-treechildren#places-files-tree-body::-moz-tree-image(places_folder_closed),
-image#place-view-rootPath-icon {
-  list-style-image: url("images/icon-places-folder-closed.png?$cache_index") !important; }
-
+  list-style-image: url('images/icon-places-folder-open.png') !important;
+}
+treechildren#places-files-tree-body::-moz-tree-image(places_folder_closed), image#place-view-rootPath-icon {
+  list-style-image: url('images/icon-places-folder-closed.png') !important;
+}
 treechildren#places-files-tree-body::-moz-tree-image(places_file) {
-  list-style-image: url("images/icon-places-document.png?$cache_index") !important; }
-
+  list-style-image: url('images/icon-places-document.png') !important;
+}
 #place-view-vbox {
-  padding-left: 4px; }
+  padding-left: 4px;
+}
