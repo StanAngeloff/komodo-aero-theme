@@ -15,6 +15,7 @@
 }
 #menubar_main > menu .menubar-text, #main-toolboxrow > toolbaritem toolbarbutton .menubar-text {
   color: #414e77;
+  text-shadow: 0 1px 0 #e2e5ef;
 }
 #menubar_main > menu:first-child, #main-toolboxrow > toolbaritem toolbarbutton:first-child {
   border-left-width: 0;
@@ -25,6 +26,7 @@
 }
 #menubar_main > menu:hover .menubar-text, #main-toolboxrow > toolbaritem toolbarbutton:hover .menubar-text {
   color: #262d46;
+  text-shadow: 0 1px 0 #ffffff;
 }
 #menubar_main > menu {
   padding: 2px 3px;
@@ -236,6 +238,9 @@
 #leftTabBox.vertical_tabs > tabs tab:first-child {
   border-top: 1px solid;
 }
+#leftTabBox.vertical_tabs > tabs tab:first-of-type, #leftTabBox.vertical_tabs > tabs tab:last-of-type {
+  -moz-box-shadow: 0 3px 12px #c9cfd3;
+}
 #leftTabBox.vertical_tabs > tabs tab:hover:not([selected="true"]) {
   background: #e5e8ea url('images/background-black-line.png') repeat-y 100% 0;
   color: #4c575e;
@@ -252,6 +257,7 @@
 }
 #leftTabBox.vertical_tabs > tabs tab[selected="true"] .tab-text {
   font-weight: normal;
+  text-shadow: 1px 0 0 #ffffff;
 }
 #leftTabBox.vertical_tabs > tabs tab .vertical-label-vbox > label {
   margin-top: -4px;
@@ -268,6 +274,7 @@
   margin: 0;
   padding: 5px 0 0 4px;
   min-height: 26px;
+  text-shadow: 0 1px 0 #ffffff;
 }
 #leftTabBox.vertical_tabs > tabpanels tabpanel vbox > hbox .tabs-closebutton {
   -moz-border-radius-topleft: 2px;
@@ -275,6 +282,9 @@
 #leftTabBox.vertical_tabs > tabpanels tabpanel vbox:first-child > hbox {
   background: #f3f4f5;
   border-bottom: none;
+}
+#rightTabBox > tabs .tab-text {
+  text-shadow: 0 1px 0 #ffffff;
 }
 #tabbed-view > tabs, #output_area > tabs {
   -moz-appearance: none;
@@ -306,6 +316,12 @@
 }
 #tabbed-view > tabs tab .tab-image-middle .tab-close-button, #output_area > tabs tab .tab-image-middle .tab-close-button {
   display: none;
+}
+#tabbed-view > tabs tab:first-of-type,
+#output_area > tabs tab:first-of-type,
+#tabbed-view > tabs tab:last-of-type,
+#output_area > tabs tab:last-of-type {
+  -moz-box-shadow: 3px 0 12px #c9cfd3;
 }
 #tabbed-view > tabs tab:hover:not([selected="true"]), #output_area > tabs tab:hover:not([selected="true"]) {
   background: #f3f4f5;
