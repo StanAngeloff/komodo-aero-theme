@@ -60,6 +60,53 @@
 #output_area {
   -moz-appearance: none;
 }
+#leftTabBox .tabs-select-button,
+#rightTabBox .tabs-select-button,
+#tabbed-view .tabs-select-button,
+#output_area .tabs-select-button,
+#leftTabBox .tabs-closebutton,
+#rightTabBox .tabs-closebutton,
+#tabbed-view .tabs-closebutton,
+#output_area .tabs-closebutton {
+  background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  border-top: 1px solid;
+  padding: 1px 0;
+}
+#leftTabBox .tabs-select-button:hover,
+#rightTabBox .tabs-select-button:hover,
+#tabbed-view .tabs-select-button:hover,
+#output_area .tabs-select-button:hover,
+#leftTabBox .tabs-closebutton:hover,
+#rightTabBox .tabs-closebutton:hover,
+#tabbed-view .tabs-closebutton:hover,
+#output_area .tabs-closebutton:hover {
+  background: #f3f4f5 url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+}
+#leftTabBox .tabs-closebutton,
+#rightTabBox .tabs-closebutton,
+#tabbed-view .tabs-closebutton,
+#output_area .tabs-closebutton {
+  list-style-image: url('images/icon-close.png');
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+#leftTabBox .tabs-closebutton:hover,
+#rightTabBox .tabs-closebutton:hover,
+#tabbed-view .tabs-closebutton:hover,
+#output_area .tabs-closebutton:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+#leftTabBox .tabs-closebutton:hover:active,
+#rightTabBox .tabs-closebutton:hover:active,
+#tabbed-view .tabs-closebutton:hover:active,
+#output_area .tabs-closebutton:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+#leftTabBox .toolbarbutton-menu-dropmarker .dropmarker-icon,
+#rightTabBox .toolbarbutton-menu-dropmarker .dropmarker-icon,
+#tabbed-view .toolbarbutton-menu-dropmarker .dropmarker-icon,
+#output_area .toolbarbutton-menu-dropmarker .dropmarker-icon {
+  list-style-image: url('images/icon-drop-marker-down.png');
+}
 #leftTabBox tree treechildren,
 #rightTabBox tree treechildren,
 #tabbed-view tree treechildren,
@@ -148,53 +195,6 @@
   border-bottom: 1px solid #9eaab1;
   background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
 }
-#leftTabBox > tabs .tabs-select-button,
-#rightTabBox > tabs .tabs-select-button,
-#tabbed-view > tabs .tabs-select-button,
-#output_area > tabs .tabs-select-button,
-#leftTabBox > tabs .tabs-closebutton,
-#rightTabBox > tabs .tabs-closebutton,
-#tabbed-view > tabs .tabs-closebutton,
-#output_area > tabs .tabs-closebutton {
-  background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-  border-top: 1px solid;
-  padding: 1px 0;
-}
-#leftTabBox > tabs .tabs-select-button:hover,
-#rightTabBox > tabs .tabs-select-button:hover,
-#tabbed-view > tabs .tabs-select-button:hover,
-#output_area > tabs .tabs-select-button:hover,
-#leftTabBox > tabs .tabs-closebutton:hover,
-#rightTabBox > tabs .tabs-closebutton:hover,
-#tabbed-view > tabs .tabs-closebutton:hover,
-#output_area > tabs .tabs-closebutton:hover {
-  background: #f3f4f5 url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-}
-#leftTabBox > tabs .tabs-closebutton,
-#rightTabBox > tabs .tabs-closebutton,
-#tabbed-view > tabs .tabs-closebutton,
-#output_area > tabs .tabs-closebutton {
-  list-style-image: url('images/icon-close.png');
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-#leftTabBox > tabs .tabs-closebutton:hover,
-#rightTabBox > tabs .tabs-closebutton:hover,
-#tabbed-view > tabs .tabs-closebutton:hover,
-#output_area > tabs .tabs-closebutton:hover {
-  -moz-image-region: rect(0px, 32px, 16px, 16px);
-}
-#leftTabBox > tabs .tabs-closebutton:hover:active,
-#rightTabBox > tabs .tabs-closebutton:hover:active,
-#tabbed-view > tabs .tabs-closebutton:hover:active,
-#output_area > tabs .tabs-closebutton:hover:active {
-  -moz-image-region: rect(0px, 48px, 16px, 32px);
-}
-#leftTabBox > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
-#rightTabBox > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
-#tabbed-view > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon,
-#output_area > tabs .toolbarbutton-menu-dropmarker .dropmarker-icon {
-  list-style-image: url('images/icon-drop-marker-down.png');
-}
 #leftTabBox > tabpanels,
 #rightTabBox > tabpanels,
 #tabbed-view > tabpanels,
@@ -207,6 +207,74 @@
 #output_area > tabpanels tabpanel {
   background: #f3f4f5;
   border-top: none;
+}
+#leftTabBox.vertical_tabs > tabs {
+  -moz-appearance: none;
+  background: #e5e8ea url('images/background-left-right-white-gradient.png') repeat-y 0 0;
+  border-bottom: none;
+}
+#leftTabBox.vertical_tabs > tabs .tabs-left {
+  background: transparent url('images/background-black-line.png') repeat-y 100% 0;
+  min-height: 26px;
+  border: none;
+}
+#leftTabBox.vertical_tabs > tabs tab {
+  -moz-appearance: none;
+  background: #d7dcdf url('images/background-black-line.png') repeat-y 100% 0;
+  color: #5d6a73;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid;
+  border-left: 3px solid;
+  outline: none;
+  padding: 5px 4px;
+  font-weight: normal;
+  -moz-border-left-colors: #d7dcdf;
+  -moz-border-bottom-colors: #9eaab1;
+  -moz-border-radius: 0;
+}
+#leftTabBox.vertical_tabs > tabs tab:first-child {
+  border-top: 1px solid;
+}
+#leftTabBox.vertical_tabs > tabs tab:hover:not([selected="true"]) {
+  background: #e5e8ea url('images/background-black-line.png') repeat-y 100% 0;
+  color: #4c575e;
+  -moz-border-left-colors: #e5e8ea;
+  -moz-border-top-colors: #9eaab1;
+  -moz-border-bottom-colors: #9eaab1;
+}
+#leftTabBox.vertical_tabs > tabs tab[selected="true"] {
+  background: #f3f4f5 url('images/background-left-right-white-gradient.png') repeat-y 0 0;
+  color: #3b4349;
+  -moz-border-left-colors: #ff9000;
+  -moz-border-top-colors: #9eaab1;
+  -moz-border-bottom-colors: #9eaab1;
+}
+#leftTabBox.vertical_tabs > tabs tab[selected="true"] .tab-text {
+  font-weight: normal;
+}
+#leftTabBox.vertical_tabs > tabs tab .vertical-label-vbox > label {
+  margin-top: -4px;
+  margin-bottom: -4px;
+}
+#leftTabBox.vertical_tabs > tabs .tabs-right {
+  background: transparent url('images/background-black-line.png') repeat-y 100% 0;
+}
+#leftTabBox.vertical_tabs > tabpanels tabpanel vbox > hbox {
+  background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  border-bottom: 1px solid #9eaab1;
+}
+#leftTabBox.vertical_tabs > tabpanels tabpanel vbox > hbox .tab-text {
+  margin: 0;
+  padding: 5px 0 0 4px;
+  min-height: 26px;
+}
+#leftTabBox.vertical_tabs > tabpanels tabpanel vbox > hbox .tabs-closebutton {
+  -moz-border-radius-topleft: 2px;
+}
+#leftTabBox.vertical_tabs > tabpanels tabpanel vbox:first-child > hbox {
+  background: #f3f4f5;
+  border-bottom: none;
 }
 #tabbed-view > tabs, #output_area > tabs {
   -moz-appearance: none;
@@ -305,6 +373,9 @@ treechildren#places-files-tree-body::-moz-tree-image(places_folder_closed), imag
 }
 treechildren#places-files-tree-body::-moz-tree-image(places_file) {
   list-style-image: url('images/icon-places-document.png') !important;
+}
+#places-files-tree {
+  margin: 0 4px 1px !important;
 }
 #place-view-vbox {
   padding-left: 4px;
