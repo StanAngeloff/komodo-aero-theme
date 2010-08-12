@@ -393,10 +393,10 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
 .upfolder-icon {
   list-style-image: url('images/icon-places-folder-up.png') !important;
 }
-.upfolder-icon image {
+.upfolder-icon > image {
   margin-right:3px;
 }
-.project-tools-icon image {
+.project-tools-icon > image {
   margin-right:3px;
 }
 #places-files-tree {
