@@ -1,6 +1,6 @@
 A better Windows 7/Vista Aero theme for Komodo Edit:
 
-![Preview](http://imgur.com/D5zZK.png)
+![Preview](http://imgur.com/sEfpK.png)
 
 How to Install (stable)
 =======================
