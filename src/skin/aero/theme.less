@@ -434,17 +434,26 @@ image#place-view-rootPath-icon {
 treechildren#places-files-tree-body::-moz-tree-image(places_file) {
   list-style-image: url('images/icon-places-document.png') !important;
 }
-.upfolder-icon {
-  list-style-image: url('images/icon-places-folder-up.png') !important;
+.project-tools-icon,
+.project-tools-icon:hover {
+  list-style-image: url('images/icon-places-gear.png') !important;
 }
 .upfolder-icon {
   list-style-image: url('images/icon-places-folder-up.png') !important;
+  -moz-image-region: rect(0, 16px, 16px, 0);
+
+  &[disabled="true"],
+  &[disabled="true"]:hover,
+  &[disabled="true"]:hover:active {
+    list-style-image : url('images/icon-places-folder-up.png') !important;
+    -moz-image-region: rect(16px, 16px, 32px, 0);
+  }
 }
 .history-back-icon {
-  list-style-image: url('images/icon-arrow-back.png') !important;
+  list-style-image: url('images/icon-places-browser.png') !important;
 }
 .history-forward-icon {
-  list-style-image: url('images/icon-arrow-forward.png') !important;
+  list-style-image: url('images/icon-places-browser.png') !important;
 }
 
 // COMPONENTS
@@ -456,4 +465,10 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
 
 #place-view-vbox {
   padding-left: 4px;
+  margin-right: 4px;
+}
+
+.project-tools-icon > image,
+.upfolder-icon > image {
+  margin-right: 3px;
 }
