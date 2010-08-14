@@ -217,12 +217,12 @@
 }
 #leftTabBox.vertical_tabs > tabs .tabs-left {
   background: transparent url('images/background-black-line.png') repeat-y 100% 0;
-  min-height: 26px;
+  min-height: 25px;
   border: none;
 }
 #leftTabBox.vertical_tabs > tabs tab {
   -moz-appearance: none;
-  background: #d7dcdf url('images/background-black-line.png') repeat-y 100% 0;
+  background: #e5e8ea url('images/background-black-line.png') repeat-y 100% 0;
   color: #5d6a73;
   border-top: none;
   border-right: none;
@@ -231,7 +231,7 @@
   outline: none;
   padding: 5px 4px 5px 0;
   font-weight: normal;
-  -moz-border-left-colors: #d7dcdf;
+  -moz-border-left-colors: #9eaab1;
   -moz-border-bottom-colors: #9eaab1;
   -moz-border-radius: 0;
 }
@@ -242,9 +242,9 @@
   -moz-box-shadow: 0 3px 12px #c9cfd3;
 }
 #leftTabBox.vertical_tabs > tabs tab:hover:not([selected="true"]) {
-  background: #e5e8ea url('images/background-black-line.png') repeat-y 100% 0;
+  background: #f3f4f5 url('images/background-black-line.png') repeat-y 100% 0;
   color: #4c575e;
-  -moz-border-left-colors: #e5e8ea;
+  -moz-border-left-colors: #b7a385;
   -moz-border-top-colors: #9eaab1;
   -moz-border-bottom-colors: #9eaab1;
 }
@@ -273,15 +273,31 @@
 #leftTabBox.vertical_tabs > tabpanels tabpanel vbox > hbox .tab-text {
   margin: 0;
   padding: 5px 0 0 4px;
-  min-height: 26px;
+  min-height: 25px;
   text-shadow: 0 1px 0 #ffffff;
 }
 #leftTabBox.vertical_tabs > tabpanels tabpanel vbox > hbox .tabs-closebutton {
   -moz-border-radius-topleft: 2px;
+  height: 21px;
 }
 #leftTabBox.vertical_tabs > tabpanels tabpanel vbox:first-child > hbox {
   background: #f3f4f5;
   border-bottom: none;
+}
+.tabpanel-vertical-text-hbox {
+  -moz-appearance: none !important;
+}
+.tabpanel-vertical-text-vbox {
+  border-left: none !important;
+}
+#rightTabBox tabs[type="sidebar"] {
+  height: 26px;
+}
+#rightTabBox tabs[type="sidebar"] toolbarbutton {
+  height: 20px;
+}
+#rightTabBox tabs[type="sidebar"] toolbarbutton image, #rightTabBox tabs[type="sidebar"] toolbarbutton dropmarker {
+  margin: 1px 1px 0 0;
 }
 #rightTabBox > tabs .tab-text {
   text-shadow: 0 1px 0 #ffffff;
@@ -384,7 +400,7 @@
 treechildren#places-files-tree-body::-moz-tree-image(places_folder_open) {
   list-style-image: url('images/icon-places-folder-open.png') !important;
 }
-treechildren#places-files-tree-body::-moz-tree-image(places_folder_closed), image#place-view-rootPath-icon {
+treechildren#places-files-tree-body::-moz-tree-image(places_folder_closed), image#place-view-rootPath-icon, #place-view-rootPath-icon-toolbarbutton .toolbarbutton-icon {
   list-style-image: url('images/icon-places-folder-closed.png') !important;
 }
 treechildren#places-files-tree-body::-moz-tree-image(places_file) {
@@ -408,12 +424,18 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
   list-style-image: url('images/icon-places-browser.png') !important;
 }
 #places-files-tree {
-  margin: 0 4px 1px !important;
+  -moz-appearance: none;
+  border: none;
+  border-top: 1px solid #c9cfd3;
+  margin: 0;
 }
 #place-view-vbox {
   padding-left: 4px;
   margin-right: 4px;
 }
-.project-tools-icon > image, .upfolder-icon > image {
+#place-view-rootPath-icon-toolbarbutton {
+  margin-left: 5px;
+}
+#place-view-rootPath-icon-toolbarbutton .toolbarbutton-icon, .project-tools-icon > image, .upfolder-icon > image {
   margin-right: 3px;
 }

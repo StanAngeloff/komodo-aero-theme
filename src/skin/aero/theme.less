@@ -211,13 +211,13 @@
 
   .tabs-left {
     background: transparent url('images/background-black-line.png') repeat-y 100% 0;
-    min-height: 26px;
+    min-height: 25px;
     border:     none;
   }
 
   tab {
     -moz-appearance:     none;
-    background:          darken(@threed_background, 5%) url('images/background-black-line.png') repeat-y 100% 0;
+    background:          @threed_background url('images/background-black-line.png') repeat-y 100% 0;
     color:               darken(@threed_background, 50%);
     border-top:          none;
     border-right:        none;
@@ -226,7 +226,7 @@
     outline:             none;
     padding:             5px 4px 5px 0;
     font-weight:         normal;
-    -moz-border-left-colors:   darken(@threed_background, 5%);
+    -moz-border-left-colors:   darken(@threed_background, 25%);
     -moz-border-bottom-colors: darken(@threed_background, 25%);
     -moz-border-radius:        0;
 
@@ -240,9 +240,9 @@
     }
 
     &:hover:not([selected="true"]) {
-      background:                @threed_background url('images/background-black-line.png') repeat-y 100% 0;
+      background:                lighten(@threed_background, 5%) url('images/background-black-line.png') repeat-y 100% 0;
       color:                     darken(@threed_background, 57.5%);
-      -moz-border-left-colors:   @threed_background;
+      -moz-border-left-colors:   mix(darken(@threed_background, 25%), @highlight_color, 75%);
       -moz-border-top-colors:    darken(@threed_background, 25%);
       -moz-border-bottom-colors: darken(@threed_background, 25%);
     }
@@ -280,18 +280,40 @@
     .tab-text {
       margin:      0;
       padding:     5px 0 0 4px;
-      min-height:  26px;
+      min-height:  25px;
       text-shadow: 0 1px 0 lighten(@threed_background, 10%);
     }
 
     .tabs-closebutton {
       -moz-border-radius-topleft: 2px;
+      height:                     21px;
     }
   }
 
   vbox:first-child > hbox {
     background:    lighten(@threed_background, 5%);
     border-bottom: none;
+  }
+}
+
+.tabpanel-vertical-text-hbox {
+  -moz-appearance: none !important;
+}
+.tabpanel-vertical-text-vbox {
+  border-left: none !important;
+}
+
+#rightTabBox {
+  tabs[type="sidebar"] {
+    height: 26px;
+
+    toolbarbutton {
+      height: 20px;
+
+      image, dropmarker {
+        margin: 1px 1px 0 0;
+      }
+    }
   }
 }
 
@@ -428,7 +450,8 @@ treechildren#places-files-tree-body::-moz-tree-image(places_folder_open) {
   list-style-image: url('images/icon-places-folder-open.png') !important;
 }
 treechildren#places-files-tree-body::-moz-tree-image(places_folder_closed),
-image#place-view-rootPath-icon {
+image#place-view-rootPath-icon,
+#place-view-rootPath-icon-toolbarbutton .toolbarbutton-icon {
   list-style-image: url('images/icon-places-folder-closed.png') !important;
 }
 treechildren#places-files-tree-body::-moz-tree-image(places_file) {
@@ -460,7 +483,10 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
 // ==========
 
 #places-files-tree {
-  margin: 0 4px 1px !important;
+  -moz-appearance: none;
+  border:          none;
+  border-top:      1px solid darken(@threed_background, 10%);
+  margin:          0;
 }
 
 #place-view-vbox {
@@ -468,6 +494,11 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
   margin-right: 4px;
 }
 
+#place-view-rootPath-icon-toolbarbutton {
+  margin-left: 5px;
+}
+
+#place-view-rootPath-icon-toolbarbutton .toolbarbutton-icon,
 .project-tools-icon > image,
 .upfolder-icon > image {
   margin-right: 3px;
