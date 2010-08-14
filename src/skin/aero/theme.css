@@ -326,7 +326,7 @@
 #tabbed-view > tabs tab:hover:not([selected="true"]), #output_area > tabs tab:hover:not([selected="true"]) {
   background: #f3f4f5;
   color: #4c575e;
-  -moz-border-top-colors: mix(#9eaab1, #ff9000, 75%);
+  -moz-border-top-colors: #b7a385;
   -moz-border-right-colors: #9eaab1;
   -moz-border-left-colors: #9eaab1;
 }
