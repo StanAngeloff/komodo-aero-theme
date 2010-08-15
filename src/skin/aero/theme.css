@@ -219,6 +219,7 @@
   background: transparent url('images/background-black-line.png') repeat-y 100% 0;
   min-height: 25px;
   border: none;
+  -moz-box-flex: 0;
 }
 #leftTabBox.vertical_tabs > tabs tab {
   -moz-appearance: none;
