@@ -440,3 +440,9 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
 #place-view-rootPath-icon-toolbarbutton .toolbarbutton-icon, .project-tools-icon > image, .upfolder-icon > image {
   margin-right: 3px;
 }
+.syntax-error {
+  list-style-image: url('images/icon-syntax-error.png') !important;
+}
+.syntax-okay {
+  list-style-image: url('images/icon-syntax-okay.png') !important;
+}
