@@ -34,7 +34,7 @@
 #main-toolboxrow > toolbaritem > toolbarbutton {
   padding: 5px 3px;
 }
-#bottom_splitter {
+#bottom_splitter, #places_projects_splitter {
   background: #f3f4f5;
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -284,6 +284,23 @@
 #leftTabBox.vertical_tabs > tabpanels tabpanel vbox:first-child > hbox {
   background: #f3f4f5;
   border-bottom: none;
+}
+#placesViewbox_projects_hbox {
+  background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0 !important;
+  border-bottom: 1px solid #9eaab1;
+}
+#placesViewbox_projects_hbox[projects="hide"] {
+  background-color: #eceef0 !important;
+  border-top-color: #9eaab1 !important;
+}
+#placesViewbox_projects_hbox[projects="hide"] #placesViewbox_projects_hbox_label_1 {
+  color: #5d6a73 !important;
+}
+#placesViewbox_projects_hbox_label_1 {
+  margin: 0;
+  padding: 5px 0 0 4px;
+  min-height: 25px;
+  text-shadow: 0 1px 0 #ffffff;
 }
 .tabpanel-vertical-text-hbox {
   -moz-appearance: none !important;

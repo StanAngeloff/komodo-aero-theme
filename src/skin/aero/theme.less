@@ -55,7 +55,8 @@
 // SPLITTERS
 // =========
 
-#bottom_splitter {
+#bottom_splitter,
+#places_projects_splitter {
   background:                lighten(@threed_background, 5%);
   border-top:                1px solid;
   border-bottom:             1px solid;
@@ -295,6 +296,27 @@
     background:    lighten(@threed_background, 5%);
     border-bottom: none;
   }
+}
+
+#placesViewbox_projects_hbox {
+  background:    @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0 !important;
+  border-bottom: 1px solid darken(@threed_background, 25%);
+
+  &[projects="hide"] {
+    background-color: lighten(@threed_background, 2.5%) !important;
+    border-top-color: darken(@threed_background, 25%) !important;
+
+    #placesViewbox_projects_hbox_label_1 {
+      color: darken(@threed_background, 50%) !important;
+    }
+  }
+}
+
+#placesViewbox_projects_hbox_label_1 {
+  margin:      0;
+  padding:     5px 0 0 4px;
+  min-height:  25px;
+  text-shadow: 0 1px 0 lighten(@threed_background, 10%);
 }
 
 .tabpanel-vertical-text-hbox {
