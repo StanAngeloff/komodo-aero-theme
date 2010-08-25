@@ -419,10 +419,10 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
   -moz-image-region: rect(16px, 16px, 32px, 0);
 }
 .history-back-icon {
-  list-style-image: url('images/icon-places-browser.png') !important;
+  list-style-image: url('images/icons-places-browser.png') !important;
 }
 .history-forward-icon {
-  list-style-image: url('images/icon-places-browser.png') !important;
+  list-style-image: url('images/icons-places-browser.png') !important;
 }
 #places-files-tree {
   -moz-appearance: none;
@@ -440,9 +440,19 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
 #place-view-rootPath-icon-toolbarbutton .toolbarbutton-icon, .project-tools-icon > image, .upfolder-icon > image {
   margin-right: 3px;
 }
+.syntax-in-progress {
+  list-style-image: url('images/icons-syntax.png') !important;
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+.syntax-warning {
+  list-style-image: url('images/icons-syntax.png') !important;
+  -moz-image-region: rect(16px, 16px, 32px, 0);
+}
 .syntax-error {
-  list-style-image: url('images/icon-syntax-error.png') !important;
+  list-style-image: url('images/icons-syntax.png') !important;
+  -moz-image-region: rect(32px, 16px, 48px, 0);
 }
 .syntax-okay {
-  list-style-image: url('images/icon-syntax-okay.png') !important;
+  list-style-image: url('images/icons-syntax.png') !important;
+  -moz-image-region: rect(48px, 16px, 64px, 0);
 }
