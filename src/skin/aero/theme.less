@@ -339,6 +339,18 @@
       margin:      1px 0 0;
       height:      22px;
       border-left: none;
+
+      @sprite_size: 16px;
+
+      list-style-image:  url('images/icons-close.png');
+      -moz-image-region: rect(0, @sprite_size, @sprite_size, 0);
+
+      &:hover {
+        -moz-image-region: rect(0px, @sprite_size * 2, @sprite_size, @sprite_size);
+        &:active {
+          -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2);
+        }
+      }
     }
     .tabs-select-button {
       margin:       1px 0 0;
@@ -346,6 +358,34 @@
       border-right: 1px solid darken(@threed_background, 25%);
       -moz-border-radius-topleft:  0;
       -moz-border-radius-topright: 2px;
+    }
+  }
+}
+
+#leftTabBox .tabs-closebutton {
+  @sprite_size: 16px;
+
+  list-style-image:  url('images/icons-close.png');
+  -moz-image-region: rect(@sprite_size, @sprite_size, @sprite_size * 2, 0);
+
+  &:hover {
+    -moz-image-region: rect(@sprite_size, @sprite_size * 2, @sprite_size * 2, @sprite_size);
+    &:active {
+      -moz-image-region: rect(@sprite_size, @sprite_size * 3, @sprite_size * 2, @sprite_size * 2);
+    }
+  }
+}
+
+#output_area .tabs-closebutton {
+  @sprite_size: 16px;
+
+  list-style-image:  url('images/icons-close.png');
+  -moz-image-region: rect(@sprite_size * 2, @sprite_size, @sprite_size * 3, 0);
+
+  &:hover {
+    -moz-image-region: rect(@sprite_size * 2, @sprite_size * 2, @sprite_size * 3, @sprite_size);
+    &:active {
+      -moz-image-region: rect(@sprite_size * 2, @sprite_size * 3, @sprite_size * 3, @sprite_size * 2);
     }
   }
 }

@@ -312,6 +312,14 @@
   margin: 1px 0 0;
   height: 22px;
   border-left: none;
+  list-style-image: url('images/icons-close.png');
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}
+#right_toolbox_tabs .sidebar-buttons-reversed .tabs-closebutton:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+#right_toolbox_tabs .sidebar-buttons-reversed .tabs-closebutton:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
 }
 #right_toolbox_tabs .sidebar-buttons-reversed .tabs-select-button {
   margin: 1px 0 0;
@@ -319,6 +327,26 @@
   border-right: 1px solid #9eaab1;
   -moz-border-radius-topleft: 0;
   -moz-border-radius-topright: 2px;
+}
+#leftTabBox .tabs-closebutton {
+  list-style-image: url('images/icons-close.png');
+  -moz-image-region: rect(16px, 16px, 32px, 0);
+}
+#leftTabBox .tabs-closebutton:hover {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+#leftTabBox .tabs-closebutton:hover:active {
+  -moz-image-region: rect(16px, 48px, 32px, 32px);
+}
+#output_area .tabs-closebutton {
+  list-style-image: url('images/icons-close.png');
+  -moz-image-region: rect(32px, 16px, 48px, 0);
+}
+#output_area .tabs-closebutton:hover {
+  -moz-image-region: rect(32px, 32px, 48px, 16px);
+}
+#output_area .tabs-closebutton:hover:active {
+  -moz-image-region: rect(32px, 48px, 48px, 32px);
 }
 #placesViewbox_projects_hbox {
   background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0 !important;
