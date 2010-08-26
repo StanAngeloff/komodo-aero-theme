@@ -415,6 +415,25 @@
 #statusbarviewbox statusbarpanel toolbarbutton:hover {
   background: #f3f4f5 url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
 }
+#vim-hbox {
+  background: #f5e5d1 url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
+  -moz-box-align: stretch !important;
+  vertical-align: top;
+}
+#vim-input-label {
+  height: 18px;
+  margin: 0 2px 0 4px;
+  padding: 1px 0;
+  font-weight: bold;
+}
+#vim-input-buffer {
+  -moz-appearance: none;
+  font-weight: bold;
+  background: transparent;
+  min-height: 18px;
+  margin: 0 !important;
+  padding: 1px 0 !important;
+}
 treechildren#places-files-tree-body::-moz-tree-image(places_folder_open) {
   list-style-image: url('images/icon-places-folder-open.png') !important;
 }

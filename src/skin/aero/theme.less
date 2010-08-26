@@ -428,6 +428,9 @@
   }
 }
 
+// STATUSBAR
+// =========
+
 #statusbarviewbox {
   -moz-appearance: none;
   background:      @threed_background url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
@@ -464,6 +467,31 @@
       }
     }
   }
+}
+
+// VIM EMULATION
+// =============
+
+#vim-hbox {
+  background: mix(lighten(@threed_background, 5%), @highlight_color, 85%) url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
+  -moz-box-align: stretch !important;
+  vertical-align: top;
+}
+
+#vim-input-label {
+  height:      18px;
+  margin:      0 2px 0 4px;
+  padding:     1px 0;
+  font-weight: bold;
+}
+
+#vim-input-buffer {
+  -moz-appearance: none;
+  font-weight:     bold;
+  background:      transparent;
+  min-height:      18px;
+  margin:          0 !important;
+  padding:         1px 0 !important;
 }
 
 // IMAGES
