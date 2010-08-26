@@ -279,28 +279,11 @@
 }
 #leftTabBox.vertical_tabs > tabpanels tabpanel vbox > hbox .tabs-closebutton {
   -moz-border-radius-topleft: 2px;
-  height: 21px;
+  height: 22px;
 }
 #leftTabBox.vertical_tabs > tabpanels tabpanel vbox:first-child > hbox {
   background: #f3f4f5;
   border-bottom: none;
-}
-#placesViewbox_projects_hbox {
-  background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0 !important;
-  border-bottom: 1px solid #9eaab1;
-}
-#placesViewbox_projects_hbox[projects="hide"] {
-  background-color: #eceef0 !important;
-  border-top-color: #9eaab1 !important;
-}
-#placesViewbox_projects_hbox[projects="hide"] #placesViewbox_projects_hbox_label_1 {
-  color: #5d6a73 !important;
-}
-#placesViewbox_projects_hbox_label_1 {
-  margin: 0;
-  padding: 5px 0 0 4px;
-  min-height: 25px;
-  text-shadow: 0 1px 0 #ffffff;
 }
 .tabpanel-vertical-text-hbox {
   -moz-appearance: none !important;
@@ -318,6 +301,40 @@
   margin: 1px 1px 0 0;
 }
 #rightTabBox > tabs .tab-text {
+  text-shadow: 0 1px 0 #ffffff;
+}
+#right_toolbox_tabs .children-reversed .tab-text {
+  margin: 0;
+  padding: 3px 4px 0 0;
+  min-height: 23px;
+}
+#right_toolbox_tabs .sidebar-buttons-reversed .tabs-closebutton {
+  margin: 1px 0 0;
+  height: 22px;
+  border-left: none;
+}
+#right_toolbox_tabs .sidebar-buttons-reversed .tabs-select-button {
+  margin: 1px 0 0;
+  height: 22px;
+  border-right: 1px solid #9eaab1;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 2px;
+}
+#placesViewbox_projects_hbox {
+  background: #e5e8ea url('images/background-top-bottom-white-gradient.png') repeat-x 0 0 !important;
+  border-bottom: 1px solid #9eaab1;
+}
+#placesViewbox_projects_hbox[projects="hide"] {
+  background-color: #eceef0 !important;
+  border-top-color: #9eaab1 !important;
+}
+#placesViewbox_projects_hbox[projects="hide"] #placesViewbox_projects_hbox_label_1 {
+  color: #5d6a73 !important;
+}
+#placesViewbox_projects_hbox_label_1 {
+  margin: 0;
+  padding: 5px 0 0 4px;
+  min-height: 25px;
   text-shadow: 0 1px 0 #ffffff;
 }
 #tabbed-view > tabs, #output_area > tabs {
@@ -491,4 +508,7 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
 .syntax-okay {
   list-style-image: url('images/icons-syntax.png') !important;
   -moz-image-region: rect(48px, 16px, 64px, 0);
+}
+#right_toolbox_tabs > box .sidebar-buttons {
+  -moz-box-align: start;
 }
