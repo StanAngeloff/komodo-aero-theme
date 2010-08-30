@@ -515,8 +515,15 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
   padding-left: 4px;
   margin-right: 4px;
 }
-#place-view-rootPath-icon-toolbarbutton {
-  margin-left: 5px;
+#placesRootButton .toolbarbutton-icon {
+  list-style-image: url('images/icon-places-folder-closed.png') !important;
+  margin-right: 4px;
+}
+#placesRootButton dropmarker {
+  margin: 1px 1px 0 4px;
+}
+#placesRootButton dropmarker .dropmarker-icon {
+  list-style-image: url('images/icon-drop-marker-down.png');
 }
 #place-view-rootPath-icon-toolbarbutton .toolbarbutton-icon, .project-tools-icon > image, .upfolder-icon > image {
   margin-right: 3px;
