@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE overlay>
-<?xml-stylesheet href="chrome://aerotheme/skin/theme.css" type="text/css" ?>
 <overlay id="aerotheme" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-    <script type="application/x-javascript" src="chrome://aerotheme/content/aerotheme.js" />
+    <script type="application/x-javascript" src="chrome://aerotheme/content/scripts/aerotheme.js" />
 </overlay>
