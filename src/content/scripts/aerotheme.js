@@ -3,7 +3,7 @@
   var __bind = function(func, context) {
     return function() { return func.apply(context, arguments); };
   };
-  if (!(typeof extension !== "undefined" && extension !== null)) {
+  if (!(typeof extensions !== "undefined" && extensions !== null)) {
     this.extensions = {};
   }
   if (!(extensions.aerotheme != null)) {

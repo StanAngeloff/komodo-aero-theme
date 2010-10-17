@@ -1,4 +1,4 @@
-this.extensions = {} unless extension?
+this.extensions = {} unless extensions?
 this.extensions.aerotheme = {} unless extensions.aerotheme?
 
 `const Cc = Components.classes`
