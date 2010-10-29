@@ -1,6 +1,6 @@
-A better Windows 7/Vista Aero theme for Komodo Edit:
+Awesome Windows 7/Vista Aero theme for Komodo Edit:
 
-![Preview](http://i.imgur.com/nbZeZ.png)
+![Preview](http://i.imgur.com/HzUxV.png)
 
 How to Install (stable)
 =======================
@@ -19,3 +19,13 @@ Running the latest copy (unstable, recommended)
 You can also install Aero Theme from source. Follow the
 [Firefox extension proxy file](https://developer.mozilla.org/en/Setting_up_extension_development_environment#Firefox_extension_proxy_file)
 instructions. You can find your XRE/extensions directory path [in the docs](http://docs.activestate.com/komodo/5.0/trouble.html#appdata_dir).
+
+Changelog
+=========
+
+0.5
+---
+
+Complete rewrite of the extension for the final release of Komodo Edit/IDE 6.<br />
+All CSS selectors have been optimised.<br />
+The `.less` file is compiled on demand which should allow for UI customisations in a following release.

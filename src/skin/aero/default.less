@@ -1,595 +1,564 @@
-@menu_background:      #d1d6e6;
+@main_background:      #d1d6e6;
 @threed_background:    #e5e8ea;
 @selection_background: #c1dbfc;
 @highlight_color:      #ff9000;
 
-// APP MENU
-// ========
+@fixed_font_family:    monaco, inconsolata, consolas, 'Lucida Console', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Courier New', Courier, monospace;
 
-#toolbox_main {
-  margin: 0;
+// THEME
+// =====
+
+toolbox {
+  -moz-appearance: none !important;
+  margin:          0 !important;
 }
 
-#menubar_main,
-#main-toolboxrow,
-#findToolbar {
+menubar,
+toolbar {
   -moz-appearance: none;
-  background:      @menu_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-  border-bottom:   1px solid darken(@menu_background, 25%);
+  background:      @main_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+  border-left:     none !important;
+  border-bottom:   1px solid rgba(0, 0, 0, 0.25);
 }
 
-#menubar_main > menu,
-#main-toolboxrow > toolbaritem toolbarbutton {
+menubar > menu {
   -moz-appearance: none;
   margin:          0;
+  padding:         2px 3px;
   border:          none;
   border-left:     1px solid transparent;
   border-right:    1px solid transparent;
-
-  .menubar-text {
-    color:       darken(@menu_background, 50%);
-    text-shadow: 0 1px 0 lighten(@menu_background, 5%);
-  }
 
   &:first-child {
     border-left-width: 0;
   }
 
-  &:hover {
-    background:   lighten(@menu_background, 5%) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-    border-color: darken(@menu_background, 5%);
+  .menubar-text {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  &:hover,
+  &[open="true"] {
+    background:   rgba(255, 255, 255, 0.25) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+    border-color: rgba(0, 0, 0, 0.25);
 
     .menubar-text {
-      color:       darken(@menu_background, 65%);
-      text-shadow: 0 1px 0 lighten(@menu_background, 15%);
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
     }
   }
 }
-#menubar_main > menu {
-  padding: 2px 3px;
-}
-#main-toolboxrow > toolbaritem > toolbarbutton {
-  padding: 5px 3px;
+
+toolbar {
+  border-top: none;
 }
 
-// SPLITTERS
-// =========
+toolbarseparator {
+  -moz-appearance:          none;
+  min-height:               20px !important;
+  -moz-border-left-colors:  transparent transparent rgba(0, 0, 0, 0.35);
+  -moz-border-right-colors: transparent transparent rgba(255, 255, 255, 0.5);
+}
 
-#bottom_splitter,
-#places_projects_splitter {
-  background:                lighten(@threed_background, 5%);
-  border-top:                1px solid;
-  border-bottom:             1px solid;
-  -moz-border-top-colors:    darken(@threed_background, 25%);
-  -moz-border-bottom-colors: darken(@threed_background, 25%);
+toolbarbutton,
+button[type="button-toolbar-a"],
+.button-toolbar-a {
+  -moz-appearance:           none;
+  margin:                    1px;
+  padding:                   3px 4px;
+  border:                    1px solid transparent;
+  -moz-border-radius:        4px;
+
+  &[checked="true"] {
+    background:                rgba(0, 0, 0, 0.05) url('images/background-bottom-top-black-gradient.png') repeat-x 0 100%;
+    -moz-box-shadow:           inset 0 0 2px rgba(0, 0, 0, 0.15);
+    -moz-border-top-colors:    rgba(0, 0, 0, 0.25);
+    -moz-border-right-colors:  rgba(0, 0, 0, 0.25);
+    -moz-border-bottom-colors: rgba(0, 0, 0, 0.25);
+    -moz-border-left-colors:   rgba(0, 0, 0, 0.25);
+    padding:                   4px !important;
+
+    .toolbarbutton-text {
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+  }
+
+  &:hover:not([disabled="true"]):not([checked="true"]):not([open="true"]) {
+    background:                rgba(255, 255, 255, 0.25) url('images/background-top-bottom-semi-white-gradient.png') repeat-x 0 0;
+    -moz-border-top-colors:    rgba(0, 0, 0, 0.25);
+    -moz-border-right-colors:  rgba(0, 0, 0, 0.25);
+    -moz-border-bottom-colors: rgba(0, 0, 0, 0.25);
+    -moz-border-left-colors:   rgba(0, 0, 0, 0.25);
+  }
+
+  &:hover:not([disabled="true"]):not([open="true"]):active,
+  &[open="true"] {
+    background:                rgba(0, 0, 0, 0.075) url('images/background-bottom-top-black-gradient.png') repeat-x 0 100%;
+    -moz-box-shadow:           inset 0 0 2px rgba(0, 0, 0, 0.25);
+    -moz-border-top-colors:    rgba(0, 0, 0, 0.35);
+    -moz-border-right-colors:  rgba(0, 0, 0, 0.35);
+    -moz-border-bottom-colors: rgba(0, 0, 0, 0.35);
+    -moz-border-left-colors:   rgba(0, 0, 0, 0.35);
+
+    .toolbarbutton-text {
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  toolbarbutton {
+    -moz-appearance: none;
+    border:          none;
+    margin:          2px;
+    padding:         2px;
+    -moz-box-shadow: none !important;
+  }
+
+  .button-internal-box {
+    border:  none !important;
+    padding: 1px !important;
+  }
+}
+
+.toolbarbutton-text {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.dropmarker-icon {
+  list-style-image: url('images/icon-drop-marker-down.png');
+}
+
+#findToolbaritem {
+  padding: 1px;
+
+  textbox {
+    height: 20px;
+  }
+}
+
+splitter[orient="vertical"] {
+  background:                @threed_background;
+  border-top:                1px solid transparent !important;
+  border-bottom:             1px solid transparent !important;
+  -moz-border-top-colors:    rgba(0, 0, 0, 0.25);
+  -moz-border-bottom-colors: rgba(0, 0, 0, 0.25);
   min-height:                5px;
 }
 
-#workspace_left_splitter,
-#workspace_right_splitter {
-  background:   lighten(@threed_background, 5%);
-  border-left:  1px solid;
-  border-right: 1px solid;
-  min-width:    5px;
-}
-#workspace_left_splitter {
-  -moz-border-left-colors:   darken(@threed_background, 25%);
-  -moz-border-right-colors:  darken(@threed_background, 25%);
-}
-#workspace_right_splitter {
-  -moz-border-left-colors:   darken(@threed_background, 25%);
-  -moz-border-right-colors:  darken(@threed_background, 25%);
+splitter[orient="horizontal"] {
+  background:                @threed_background;
+  border-left:               1px solid transparent !important;
+  border-right:              1px solid transparent !important;
+  -moz-border-left-colors:   rgba(0, 0, 0, 0.25);
+  -moz-border-right-colors:  rgba(0, 0, 0, 0.25);
+  min-width:                 5px;
 }
 
-// LEFT & RIGHT PANES
-// ==================
+treechildren {
+  margin: 1px 0;
 
-#leftTabBox,
-#rightTabBox,
-#tabbed-view,
-#output_area {
-  -moz-appearance: none;
-
-  .tabs-select-button,
-  .tabs-closebutton {
-    background: @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-    border-top: 1px solid;
-    padding:    1px 0;
-
-    &:hover {
-      background: lighten(@threed_background, 5%) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-    }
+  &::-moz-tree-row {
+    border:             2px solid transparent;
+    margin:             0 1px;
+    min-height:         20px;
+    height:             1.5em;
+    -moz-border-radius: 3px;
   }
 
-  .tabs-closebutton {
-    @sprite_size: 16px;
-
-    list-style-image:  url('images/icon-close.png');
-    -moz-image-region: rect(0, @sprite_size, @sprite_size, 0);
-
-    &:hover {
-      -moz-image-region: rect(0px, @sprite_size * 2, @sprite_size, @sprite_size);
-      &:active {
-        -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2);
-      }
-    }
+  &::-moz-tree-row(selected) {
+    background:                rgba(0, 0, 0, 0.05) url('images/background-bottom-top-black-gradient.png') repeat-x 0 100%;
+    -moz-border-top-colors:    rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.75);
+    -moz-border-right-colors:  rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.625);
+    -moz-border-bottom-colors: rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.625);
+    -moz-border-left-colors:   rgba(0, 0, 0, 0.1) rgba(255, 255, 255, 0.5);
   }
 
-  .toolbarbutton-menu-dropmarker {
-    .dropmarker-icon {
-      list-style-image: url('images/icon-drop-marker-down.png');
-    }
+  &::-moz-tree-row(selected, focus) {
+    background:                @selection_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+    -moz-border-top-colors:    darken(@selection_background, 15%) lighten(@selection_background, 10%);
+    -moz-border-right-colors:  darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
+    -moz-border-bottom-colors: darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
+    -moz-border-left-colors:   darken(@selection_background, 15%) lighten(@selection_background, 5%);
   }
 
-  tree {
-    treechildren {
-      margin: 1px 0;
+  &::-moz-tree-cell-text(selected, focus) {
+    color: WindowText;
+  }
 
-      &::-moz-tree-row {
-        border:             2px solid transparent;
-        margin:             0 1px;
-        min-height:         20px;
-        height:             1.5em;
-        -moz-border-radius: 3px;
-      }
+  &::-moz-tree-row(hover) {
+    background:                lighten(@selection_background, 10%) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+    -moz-border-top-colors:    lighten(@selection_background, 5%) lighten(@selection_background, 15%);
+    -moz-border-right-colors:  lighten(@selection_background, 5%) lighten(@selection_background, 12.5%);
+    -moz-border-bottom-colors: lighten(@selection_background, 5%) lighten(@selection_background, 12.5%);
+    -moz-border-left-colors:   lighten(@selection_background, 5%) lighten(@selection_background, 10%);
+  }
 
-      &::-moz-tree-row(selected) {
-        background:                lighten(@threed_background, 5%) url('images/background-bottom-top-black-gradient.png') repeat-x 0 100%;
-        -moz-border-top-colors:    darken(@threed_background, 5%) lighten(@threed_background, 10%);
-        -moz-border-right-colors:  darken(@threed_background, 5%) lighten(@threed_background, 7.5%);
-        -moz-border-bottom-colors: darken(@threed_background, 5%) lighten(@threed_background, 7.5%);
-        -moz-border-left-colors:   darken(@threed_background, 5%) lighten(@threed_background, 5%);
-      }
+  &::-moz-tree-row(selected, hover) {
+    background:                darken(@selection_background, 2.5%) url('images/background-top-bottom-semi-white-gradient.png') repeat-x 0 0;
+    -moz-border-top-colors:    darken(@selection_background, 15%) lighten(@selection_background, 10%);
+    -moz-border-right-colors:  darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
+    -moz-border-bottom-colors: darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
+    -moz-border-left-colors:   darken(@selection_background, 15%) lighten(@selection_background, 5%);
+  }
 
-      &::-moz-tree-cell-text(selected) {
-        color: darken(@threed_background, 60%);
-      }
-
-      &::-moz-tree-row(selected, focus) {
-        background:                @selection_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-        -moz-border-top-colors:    darken(@selection_background, 15%) lighten(@selection_background, 10%);
-        -moz-border-right-colors:  darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
-        -moz-border-bottom-colors: darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
-        -moz-border-left-colors:   darken(@selection_background, 15%) lighten(@selection_background, 5%);
-      }
-
-      &::-moz-tree-cell-text(selected, focus) {
-        color: darken(@threed_background, 75%);
-      }
-
-      &::-moz-tree-row(hover) {
-        background:                lighten(@selection_background, 10%) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-        -moz-border-top-colors:    lighten(@selection_background, 5%) lighten(@selection_background, 15%);
-        -moz-border-right-colors:  lighten(@selection_background, 5%) lighten(@selection_background, 12.5%);
-        -moz-border-bottom-colors: lighten(@selection_background, 5%) lighten(@selection_background, 12.5%);
-        -moz-border-left-colors:   lighten(@selection_background, 5%) lighten(@selection_background, 10%);
-      }
-
-      &::-moz-tree-row(selected, hover) {
-        background:                darken(@selection_background, 2.5%) url('images/background-top-bottom-semi-white-gradient.png') repeat-x 0 0;
-        -moz-border-top-colors:    darken(@selection_background, 15%) lighten(@selection_background, 10%);
-        -moz-border-right-colors:  darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
-        -moz-border-bottom-colors: darken(@selection_background, 15%) lighten(@selection_background, 7.5%);
-        -moz-border-left-colors:   darken(@selection_background, 15%) lighten(@selection_background, 5%);
-      }
-
-      &::-moz-tree-cell-text(selected, hover) {
-        color: darken(@threed_background, 75%);
-      }
-
-      &::-moz-tree-row(selected, current, focus) {
-        border: 2px solid transparent;
-      }
-    }
+  &::-moz-tree-row(selected, current, focus) {
+    border: 2px solid transparent;
   }
 }
 
-#leftTabBox > tabs,
-#rightTabBox > tabs,
-#tabbed-view > tabs,
-#output_area > tabs {
-  -moz-appearance: none;
-  border-bottom:   1px solid darken(@threed_background, 25%);
-  background:      @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-}
-
-#leftTabBox > tabpanels,
-#rightTabBox > tabpanels,
-#tabbed-view > tabpanels,
-#output_area > tabpanels {
-  padding-top: 0;
-
-  tabpanel {
-    background: lighten(@threed_background, 5%);
-    border-top: none;
-  }
-}
-
-#leftTabBox.vertical_tabs > tabs {
-  -moz-appearance: none;
-  background:      @threed_background url('images/background-left-right-white-gradient.png') repeat-y 0 0;
-  border-bottom:   none;
-
-  .tabs-left {
-    background:    transparent url('images/background-black-line.png') repeat-y 100% 0;
-    min-height:    25px;
-    border:        none;
-    -moz-box-flex: 0;
-  }
-
-  tab {
-    -moz-appearance:     none;
-    background:          @threed_background url('images/background-black-line.png') repeat-y 100% 0;
-    color:               darken(@threed_background, 50%);
-    border-top:          none;
-    border-right:        none;
-    border-bottom:       1px solid;
-    border-left:         3px solid;
-    outline:             none;
-    padding:             5px 4px 5px 0;
-    font-weight:         normal;
-    -moz-border-left-colors:   darken(@threed_background, 25%);
-    -moz-border-bottom-colors: darken(@threed_background, 25%);
-    -moz-border-radius:        0;
-
-    &:first-child {
-      border-top: 1px solid;
-    }
-
-    &:first-of-type,
-    &:last-of-type {
-      -moz-box-shadow: 0 3px 12px darken(@threed_background, 10%);
-    }
-
-    &:hover:not([selected="true"]) {
-      background:                lighten(@threed_background, 5%) url('images/background-black-line.png') repeat-y 100% 0;
-      color:                     darken(@threed_background, 57.5%);
-      -moz-border-left-colors:   mix(darken(@threed_background, 25%), @highlight_color, 75%);
-      -moz-border-top-colors:    darken(@threed_background, 25%);
-      -moz-border-bottom-colors: darken(@threed_background, 25%);
-    }
-
-    &[selected="true"] {
-      background:                lighten(@threed_background, 5%) url('images/background-left-right-white-gradient.png') repeat-y 0 0;
-      color:                     darken(@threed_background, 65%);
-      -moz-border-left-colors:   @highlight_color;
-      -moz-border-top-colors:    darken(@threed_background, 25%);
-      -moz-border-bottom-colors: darken(@threed_background, 25%);
-
-      .tab-text {
-        font-weight: normal;
-        text-shadow: 1px 0 0 lighten(@threed_background, 15%);
-      }
-    }
-
-    .vertical-label-vbox > label {
-      margin-top:    -4px;
-      margin-bottom: -4px;
-    }
-  }
-
-  .tabs-right {
-    background: transparent url('images/background-black-line.png') repeat-y 100% 0;
-  }
-}
-
-#leftTabBox.vertical_tabs > tabpanels tabpanel {
-
-  vbox > hbox {
-    background:    @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-    border-bottom: 1px solid darken(@threed_background, 25%);
-
-    .tab-text {
-      margin:      0;
-      padding:     5px 0 0 4px;
-      min-height:  25px;
-      text-shadow: 0 1px 0 lighten(@threed_background, 10%);
-    }
-
-    .tabs-closebutton {
-      -moz-border-radius-topleft: 2px;
-      height:                     22px;
-    }
-  }
-
-  vbox:first-child > hbox {
-    background:    lighten(@threed_background, 5%);
-    border-bottom: none;
-  }
-}
-
-.tabpanel-vertical-text-hbox {
+statusbar {
   -moz-appearance: none !important;
-}
-.tabpanel-vertical-text-vbox {
-  border-left: none !important;
-}
-
-#rightTabBox {
-  tabs[type="sidebar"] {
-    height: 26px;
-
-    toolbarbutton {
-      height: 20px;
-
-      image, dropmarker {
-        margin: 1px 1px 0 0;
-      }
-    }
-  }
-}
-
-#rightTabBox > tabs {
-  .tab-text {
-    text-shadow: 0 1px 0 lighten(@threed_background, 10%);
-  }
-}
-
-#right_toolbox_tabs {
-  .children-reversed {
-    .tab-text {
-      margin:     0;
-      padding:    3px 4px 0 0;
-      min-height: 23px;
-    }
-  }
-
-  .sidebar-buttons-reversed {
-    .tabs-closebutton {
-      margin:      1px 0 0;
-      height:      22px;
-      border-left: none;
-
-      @sprite_size: 16px;
-
-      list-style-image:  url('images/icons-close.png');
-      -moz-image-region: rect(0, @sprite_size, @sprite_size, 0);
-
-      &:hover {
-        -moz-image-region: rect(0px, @sprite_size * 2, @sprite_size, @sprite_size);
-        &:active {
-          -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2);
-        }
-      }
-    }
-    .tabs-select-button {
-      margin:       1px 0 0;
-      height:       22px;
-      border-right: 1px solid darken(@threed_background, 25%);
-      -moz-border-radius-topleft:  0;
-      -moz-border-radius-topright: 2px;
-    }
-  }
-}
-
-#leftTabBox .tabs-closebutton {
-  @sprite_size: 16px;
-
-  list-style-image:  url('images/icons-close.png');
-  -moz-image-region: rect(@sprite_size, @sprite_size, @sprite_size * 2, 0);
-
-  &:hover {
-    -moz-image-region: rect(@sprite_size, @sprite_size * 2, @sprite_size * 2, @sprite_size);
-    &:active {
-      -moz-image-region: rect(@sprite_size, @sprite_size * 3, @sprite_size * 2, @sprite_size * 2);
-    }
-  }
-}
-
-#output_area .tabs-closebutton {
-  @sprite_size: 16px;
-
-  list-style-image:  url('images/icons-close.png');
-  -moz-image-region: rect(@sprite_size * 2, @sprite_size, @sprite_size * 3, 0);
-
-  &:hover {
-    -moz-image-region: rect(@sprite_size * 2, @sprite_size * 2, @sprite_size * 3, @sprite_size);
-    &:active {
-      -moz-image-region: rect(@sprite_size * 2, @sprite_size * 3, @sprite_size * 3, @sprite_size * 2);
-    }
-  }
-}
-
-// PLACES
-// ======
-
-#placesViewbox_projects_hbox {
-  background:    @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0 !important;
-  border-bottom: 1px solid darken(@threed_background, 25%);
-
-  &[projects="hide"] {
-    background-color: lighten(@threed_background, 2.5%) !important;
-    border-top-color: darken(@threed_background, 25%) !important;
-
-    #placesViewbox_projects_hbox_label_1 {
-      color: darken(@threed_background, 50%) !important;
-    }
-  }
-}
-
-#placesViewbox_projects_hbox_label_1 {
-  margin:      0;
-  padding:     5px 0 0 4px;
-  min-height:  25px;
-  text-shadow: 0 1px 0 lighten(@threed_background, 10%);
-}
-
-// EDITOR & TABS
-// =============
-
-#tabbed-view > tabs,
-#output_area > tabs {
-  -moz-appearance: none;
-  background:      @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
-  border-bottom:   none;
-
-  .tabstrip-box {
-    background: transparent url('images/background-black-line.png') repeat-x 0 100%;
-
-    &:not([overflow="true"]) {
-      -moz-padding-start: 0;
-    }
-  }
-
-  tab {
-    -moz-appearance:     none;
-    background:          @threed_background;
-    color:               darken(@threed_background, 50%);
-    -moz-border-radius:  0;
-    border-top:          3px solid;
-    border-right:        1px solid;
-    border-bottom:       none;
-    border-left:         0 solid;
-    outline:             none;
-    margin:              0 0 1px 0;
-    padding:             2px 5px;
-    font-weight:         normal;
-    -moz-border-top-colors:   darken(@threed_background, 25%);
-    -moz-border-right-colors: darken(@threed_background, 25%);
-    -moz-border-left-colors:  darken(@threed_background, 25%);
-
-    .tab-image-middle {
-      .tab-close-button {
-        display: none;
-      }
-    }
-
-    &:first-of-type,
-    &:last-of-type {
-      -moz-box-shadow: 3px 0 12px darken(@threed_background, 10%);
-    }
-
-    &:hover:not([selected="true"]) {
-      background:               lighten(@threed_background, 5%);
-      color:                    darken(@threed_background, 57.5%);
-      -moz-border-top-colors:   mix(darken(@threed_background, 25%), @highlight_color, 75%);
-      -moz-border-right-colors: darken(@threed_background, 25%);
-      -moz-border-left-colors:  darken(@threed_background, 25%);
-    }
-
-    &[selected="true"] {
-      background:               lighten(@threed_background, 50%);
-      color:                    darken(@threed_background, 65%);
-      -moz-border-top-colors:   @highlight_color;
-      -moz-border-right-colors: darken(@threed_background, 25%);
-      -moz-border-left-colors:  darken(@threed_background, 25%);
-      margin-bottom:            0;
-      border-bottom:            1px solid lighten(@threed_background, 50%);
-
-      .tab-image-middle {
-        .tab-close-button {
-          @sprite_size: 16px;
-
-          display:           block;
-          list-style-image:  url('images/icon-close.png');
-          -moz-image-region: rect(0, @sprite_size, @sprite_size, 0);
-
-          &:hover {
-            -moz-image-region: rect(0px, @sprite_size * 2, @sprite_size, @sprite_size);
-            &:active {
-              -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2);
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// STATUSBAR
-// =========
-
-#statusbarviewbox {
-  -moz-appearance: none;
-  background:      @threed_background url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
-  border:          none;
-  border-top:      1px solid darken(@threed_background, 25%);
+  background:      @main_background url('images/background-bottom-top-white-gradient.png') repeat-x 0 100% !important;
+  border:          none !important;
+  border-top:      1px solid rgba(0, 0, 0, 0.25) !important;
 
   statusbarpanel {
     -moz-appearance: none;
     padding:         0;
     border:          none;
-    border-right:    1px solid darken(@threed_background, 10%);
-
-    &:last-child {
-      border-right-width: 0;
-    }
+    border-right:    1px solid rgba(0, 0, 0, 0.25);
 
     toolbarbutton {
-      min-width: 36px;
-      padding:   2px 0;
+      min-width:           36px;
+      padding:             3px 0 !important;
+      -moz-border-radius:  0;
 
       .toolbarbutton-text {
         text-align: center;
       }
 
-      .toolbarbutton-menu-dropmarker {
+      dropmarker {
         margin-right: 4px;
         .dropmarker-icon {
-          list-style-image: url('images/icon-drop-marker-up.png');
+          list-style-image: url('images/icon-drop-marker-down.png');
         }
       }
 
-      &:hover {
-        background: lighten(@threed_background, 5%) url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
+      &[open="true"] {
+        -moz-box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.25);
       }
     }
   }
 }
 
-// VIM EMULATION
-// =============
+.tabs-closebutton,
+.tab-close-button {
+  @sprite_size: 16px;
 
-#vim-hbox {
-  background: mix(lighten(@threed_background, 5%), @highlight_color, 85%) url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
-  -moz-box-align: stretch !important;
-  vertical-align: top;
+  background:        transparent !important;
+  list-style-image:  url('images/icon-close.png') !important;
+  -moz-image-region: rect(0, @sprite_size, @sprite_size, 0) !important;
+  -moz-box-shadow:   none !important;
+
+  &:hover {
+    -moz-image-region: rect(0px, @sprite_size * 2, @sprite_size, @sprite_size) !important;
+
+    &:active {
+      -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2) !important;
+    }
+  }
 }
 
-#vim-input-label {
-  height:      18px;
-  margin:      0 2px 0 4px;
-  padding:     1px 0;
-  font-weight: bold;
+tabbox {
+  -moz-appearance: none !important;
+
+  tabs {
+    -moz-appearance: none;
+    background:      @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
+    height:          28px;
+
+    .tabstrip-box {
+      background: transparent url('images/background-black-line.png') repeat-x 0 100%;
+
+      &:not([overflow="true"]) {
+        -moz-padding-start: 0;
+      }
+    }
+
+    tab {
+      -moz-appearance:          none;
+      background:               @threed_background;
+      -moz-border-radius:       0 !important;
+      border-top:               3px solid transparent !important;
+      border-right:             1px solid transparent !important;
+      border-bottom:            none !important;
+      border-left:              none !important;
+      outline:                  none !important;
+      color:                    ThreeDDarkShadow;
+      margin:                   0 0 1px 0 !important;
+      padding:                  2px 8px;
+      height:                   22px;
+      -moz-border-top-colors:   rgba(0, 0, 0, 0.25);
+      -moz-border-right-colors: rgba(0, 0, 0, 0.25);
+      -moz-border-left-colors:  rgba(0, 0, 0, 0.25);
+
+      &:last-of-type {
+        -moz-box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .tab-text {
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      }
+
+      &:not([selected="true"]) .tab-close-button {
+        display: none;
+      }
+
+      &:hover:not([selected="true"]) {
+        background-color:         rgba(255, 255, 255, 0.5);
+        -moz-border-top-colors:   mix(rgba(0, 0, 0, 0.25), @highlight_color, 75%);
+        -moz-border-right-colors: rgba(0, 0, 0, 0.25);
+        -moz-border-left-colors:  rgba(0, 0, 0, 0.25);
+        text-shadow:              0 1px 0 rgba(255, 255, 255, 0.75);
+      }
+
+      &[selected="true"] {
+        background:               rgb(255, 255, 255);
+        color:                    WindowText;
+        font-weight:              normal !important;
+        -moz-border-top-colors:   @highlight_color;
+        -moz-border-right-colors: rgba(0, 0, 0, 0.25);
+        -moz-border-left-colors:  rgba(0, 0, 0, 0.25);
+        height:                   23px;
+        margin-bottom:            0 !important;
+        padding:                  2px 8px !important;
+      }
+    }
+  }
 }
 
-#vim-input-buffer {
+tabbox:not(.sidepanel) tabpanels {
+  padding: 0 !important;
+
+  tabpanel {
+    background: lighten(@threed_background, 5%) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0 !important;
+    border-top: none;
+  }
+}
+
+tabbox[orient="horizontal"] {
+
+  .tabs-left {
+    background:    transparent url('images/background-black-line.png') repeat-y;
+    min-height:    27px;
+    border:        none !important;
+    -moz-box-flex: 0 !important;
+  }
+
+  tabs {
+    width: 28px;
+  }
+
+  tab {
+    background-image:          url('images/background-black-line.png');
+    background-repeat:         repeat-y;
+    border-top:                none !important;
+    border-right:              3px solid transparent !important;
+    border-bottom:             1px solid transparent !important;
+    border-left:               3px solid transparent !important;
+    padding:                   8px 2px !important;
+    margin:                    0 !important;
+    width:                     23px;
+    -moz-border-top-colors:    rgba(0, 0, 0, 0.25);
+    -moz-border-right-colors:  rgba(0, 0, 0, 0.25);
+    -moz-border-bottom-colors: rgba(0, 0, 0, 0.25);
+    -moz-border-left-colors:   rgba(0, 0, 0, 0.25);
+
+    &:first-of-type {
+      border-top: 1px solid transparent !important;
+      -moz-box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &:last-of-type {
+      -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .vertical-button-text {
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover:not([selected="true"]) {
+      background-color:          rgba(255, 255, 255, 0.5);
+      background-image:          url('images/background-black-line.png');
+      -moz-border-top-colors:    rgba(0, 0, 0, 0.25);
+      -moz-border-right-colors:  mix(rgba(0, 0, 0, 0.25), @highlight_color, 75%);
+      -moz-border-bottom-colors: rgba(0, 0, 0, 0.25);
+      -moz-border-left-colors:   mix(rgba(0, 0, 0, 0.25), @highlight_color, 75%);
+
+      .vertical-text {
+        text-shadow:               0 1px 0 rgba(255, 255, 255, 0.75);
+      }
+    }
+
+    &[selected="true"] {
+      background-color:          lighten(@threed_background, 5%);
+      -moz-border-left-colors:   @highlight_color;
+      -moz-border-right-colors:  @highlight_color;
+      -moz-border-top-colors:    rgba(0, 0, 0, 0.25);
+      -moz-border-bottom-colors: rgba(0, 0, 0, 0.25);
+      padding:                   8px 2px !important;
+
+      .vertical-button-text {
+        font-weight: normal;
+      }
+    }
+  }
+
+  .tabs-right {
+    background: transparent url('images/background-black-line.png') repeat-y;
+  }
+
+  tabpanel {
+    border-left:         none !important;
+    border-right:        none !important;
+  }
+}
+
+tabbox[orient="horizontal"][rotation="90"] {
+  tabs {
+    background: @threed_background url('images/background-right-left-white-gradient.png') repeat-y 0 0;
+  }
+  .tabs-left, tab, .tabs-right {
+    background-position: 0 0 !important;
+  }
+  tab {
+    border-left-width: 0 !important;
+  }
+}
+
+tabbox[orient="horizontal"][rotation="270"] {
+  tabs {
+    background: @threed_background url('images/background-left-right-white-gradient.png') repeat-y 0 0;
+  }
+  .tabs-left, tab, .tabs-right {
+    background-position: 100% 0 !important;
+  }
+  tab {
+    border-right-width: 0 !important;
+  }
+}
+
+.tabpanel-vertical-text-vbox {
+  border: none !important;
+}
+
+.sidepanel tabs,
+.tabpanel-vertical-text-hbox {
+  -moz-appearance: none !important;
+  background:      @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0 !important;
+  border-bottom:   1px solid rgba(0, 0, 0, 0.25);
+  height:          28px !important;
+  text-shadow:     0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.sidepanel tabs {
+  border:          none !important;
+  border-bottom:   1px solid rgba(0, 0, 0, 0.25);
+  height:          27px !important;
+}
+
+.tabs-select-button,
+.tabs-closebutton,
+.autorepeatbutton-up,
+.scrollbutton-up,
+.autorepeatbutton-down,
+.scrollbutton-down {
+  -moz-appearance:    none !important;
+  background:         transparent !important;
+  margin:             0 !important;
+  padding:            0 !important;
+  height:             28px !important;
+  border:             none !important;
+  -moz-box-shadow:    none !important;
+  -moz-border-radius: 0;
+  width:              20px !important;
+
+  &[disabled="true"] {
+    opacity: 0.5 !important;
+  }
+}
+
+.tabs-select-button {
+  @sprite_size: 16px;
+
+  dropmarker {
+    margin:  0 !important;
+    padding: 0 !important;
+  }
+
+  .dropmarker-icon {
+    list-style-image: url('images/icons-tabs-select.png');
+    -moz-image-region: rect(0, @sprite_size, @sprite_size, 0) !important;
+  }
+
+  &:hover {
+    .dropmarker-icon {
+      -moz-image-region: rect(0px, @sprite_size * 2, @sprite_size, @sprite_size) !important;
+    }
+
+    &:active {
+      .dropmarker-icon {
+        -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2) !important;
+      }
+    }
+  }
+
+  &[open="true"] {
+    .dropmarker-icon {
+      -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2) !important;
+    }
+  }
+}
+
+.autorepeatbutton-up,
+.scrollbutton-up {
+  border-right: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+.autorepeatbutton-down,
+.scrollbutton-down {
+  border-left: 1px solid rgba(0, 0, 0, 0.5) !important;
+}
+
+// COMPONENTS
+// ==========
+
+#leftTabBox tree,
+#rightTabBox tree {
   -moz-appearance: none;
-  font-weight:     bold;
-  background:      transparent;
-  min-height:      18px;
-  margin:          0 !important;
-  padding:         1px 0 !important;
+  border:          none;
+  border-top:      1px solid rgba(0, 0, 0, 0.25);
+  margin:          0;
+}
+
+#placesSubpanelSplitter {
+  border-bottom: none !important;
+}
+
+#placesSubpanelSplitterHbox {
+  background:    @threed_background url('images/background-top-bottom-white-gradient.png') repeat-x 0 0 !important;
+}
+
+#placesSubpanelSplitter[state="collapsed"] {
+  color: red !important;
+}
+
+#komodo-box {
+  dropmarker {
+    margin: 1px 1px 0 4px;
+  }
 }
 
 // IMAGES
 // ======
 
-treechildren#places-files-tree-body::-moz-tree-image(places_folder_open) {
-  list-style-image: url('images/icon-places-folder-open.png') !important;
+treechildren::-moz-tree-image(places_folder_open) {
+  list-style-image: url('chrome://fugue/skin/icons/folder-horizontal-open.png') !important;
 }
-treechildren#places-files-tree-body::-moz-tree-image(places_folder_closed),
-image#place-view-rootPath-icon,
-#place-view-rootPath-icon-toolbarbutton .toolbarbutton-icon {
-  list-style-image: url('images/icon-places-folder-closed.png') !important;
+treechildren::-moz-tree-image(places_folder_closed),
+#placesRootButton {
+  list-style-image: url('chrome://fugue/skin/icons/folder-horizontal.png') !important;
 }
-treechildren#places-files-tree-body::-moz-tree-image(places_file) {
-  list-style-image: url('images/icon-places-document.png') !important;
-}
-.project-tools-icon,
-.project-tools-icon:hover {
-  list-style-image: url('images/icon-places-gear.png') !important;
-}
-.upfolder-icon {
-  list-style-image: url('images/icon-places-folder-up.png') !important;
-  -moz-image-region: rect(0, 16px, 16px, 0);
-
-  &[disabled="true"],
-  &[disabled="true"]:hover,
-  &[disabled="true"]:hover:active {
-    list-style-image : url('images/icon-places-folder-up.png') !important;
-    -moz-image-region: rect(16px, 16px, 32px, 0);
-  }
+treechildren::-moz-tree-image(places_file) {
+  list-style-image: url('chrome://fugue/skin/icons/document.png') !important;
 }
 .history-back-icon {
   list-style-image: url('images/icons-places-browser.png') !important;
@@ -597,59 +566,50 @@ treechildren#places-files-tree-body::-moz-tree-image(places_file) {
 .history-forward-icon {
   list-style-image: url('images/icons-places-browser.png') !important;
 }
-
-// COMPONENTS
-// ==========
-
-#places-files-tree {
-  -moz-appearance: none;
-  border:          none;
-  border-top:      1px solid darken(@threed_background, 10%);
-  margin:          0;
-}
-
-#place-view-vbox {
-  padding-left: 4px;
-  margin-right: 4px;
-}
-
-#placesRootButton {
-  .toolbarbutton-icon {
-    list-style-image: url('images/icon-places-folder-closed.png') !important;
-    margin-right: 4px;
-  }
-  dropmarker {
-    margin: 1px 1px 0 4px;
-    .dropmarker-icon {
-      list-style-image: url('images/icon-drop-marker-down.png');
-    }
-  }
-}
-
-#place-view-rootPath-icon-toolbarbutton .toolbarbutton-icon,
-.project-tools-icon > image,
-.upfolder-icon > image {
-  margin-right: 3px;
-}
-
 .syntax-in-progress {
-  list-style-image: url('images/icons-syntax.png') !important;
+  list-style-image:  url('images/icons-syntax.png') !important;
   -moz-image-region: rect(0, 16px, 16px, 0);
 }
 .syntax-warning {
-  list-style-image: url('images/icons-syntax.png') !important;
+  list-style-image:  url('images/icons-syntax.png') !important;
   -moz-image-region: rect(16px, 16px, 32px, 0);
 }
 .syntax-error {
-  list-style-image: url('images/icons-syntax.png') !important;
+  list-style-image:  url('images/icons-syntax.png') !important;
   -moz-image-region: rect(32px, 16px, 48px, 0);
 }
 .syntax-okay {
-  list-style-image: url('images/icons-syntax.png') !important;
+  list-style-image:  url('images/icons-syntax.png') !important;
   -moz-image-region: rect(48px, 16px, 64px, 0);
 }
 
+// VIM UI
+// ======
 
-#right_toolbox_tabs > box .sidebar-buttons {
-  -moz-box-align: start;
+#vim-hbox {
+  background:     mix(@main_background, @selection_background, 25%) url('images/background-bottom-top-white-gradient.png') repeat-x 0 100%;
+  -moz-box-align: stretch !important;
+}
+
+#vim-input-label {
+  height:      12px;
+  margin:      0 2px 0 4px;
+  padding:     2px 0;
+  font-weight: bold;
+  font-family: @fixed_font_family;
+  font-size:   10px;
+}
+
+#vim-input-buffer {
+  -moz-appearance: none;
+  font-family:     @fixed_font_family;
+  font-size:       10px;
+  background:      transparent;
+  min-height:      12px;
+  margin:          0 !important;
+  padding:         2px 0 !important;
+
+  .textbox-search-icons {
+    display: none;
+  }
 }

@@ -32,10 +32,9 @@ this.extensions.aerotheme.Style = class Style
     unless window.less
       loader = Cc['@mozilla.org/moz/jssubscript-loader;1'].getService Ci.mozIJSSubScriptLoader
       loader.loadSubScript 'chrome://aerotheme/content/scripts/less-1.0.36.js'
-    href = "chrome://aerotheme/skin/#{@name}.less"
     try
       parser = new less.Parser optimization: 0
-      parser.parse readContents(href), (error, root) =>
+      parser.parse readContents("chrome://aerotheme/skin/#{@name}.less"), (error, root) =>
         throw error if error
         @inject root
     catch error
@@ -47,7 +46,7 @@ this.extensions.aerotheme.Style = class Style
       document.removeChild child
       break
     pi = document.createProcessingInstruction 'xml-stylesheet', """
-      data-author="aerotheme"
+      data-extension="aerotheme"
       href="data:text/css,#{ encodeURIComponent node.toCSS().replace /images\//g, 'chrome://aerotheme/skin/images/' }"
       type="text/css"
     """
