@@ -37,13 +37,23 @@ menubar > menu {
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   }
 
-  &:hover,
-  &[open="true"] {
+  &:hover {
     background:   rgba(255, 255, 255, 0.25) url('images/background-top-bottom-white-gradient.png') repeat-x 0 0;
     border-color: rgba(0, 0, 0, 0.25);
 
     .menubar-text {
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  &[open="true"] {
+    background:               rgba(0, 0, 0, 0.075) url('images/background-bottom-top-black-gradient.png') repeat-x 0 100%;
+    -moz-box-shadow:          inset 0 0 2px rgba(0, 0, 0, 0.25);
+    -moz-border-right-colors: rgba(0, 0, 0, 0.35);
+    -moz-border-left-colors:  rgba(0, 0, 0, 0.35);
+
+    .menubar-text {
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
     }
   }
 }
@@ -304,6 +314,7 @@ tabbox {
 
       &:hover:not([selected="true"]) {
         background-color:         rgba(255, 255, 255, 0.5);
+        background-image:         none;
         -moz-border-top-colors:   mix(rgba(0, 0, 0, 0.25), @highlight_color, 75%);
         -moz-border-right-colors: rgba(0, 0, 0, 0.25);
         -moz-border-left-colors:  rgba(0, 0, 0, 0.25);
@@ -522,7 +533,8 @@ tabbox[orient="horizontal"][rotation="270"] {
 // ==========
 
 #leftTabBox tree,
-#rightTabBox tree {
+#rightTabBox tree,
+#output_area tree {
   -moz-appearance: none;
   border:          none;
   border-top:      1px solid rgba(0, 0, 0, 0.25);
