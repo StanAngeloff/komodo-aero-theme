@@ -1,4 +1,4 @@
-Awesome Windows 7/Vista Aero theme for Komodo Edit:
+Awesome Windows theme for Komodo Edit:
 
 ![Preview](http://i.imgur.com/HzUxV.png)
 
@@ -26,6 +26,7 @@ Changelog
 0.5
 ---
 
-Complete rewrite of the extension for the final release of Komodo Edit/IDE 6.<br />
-All CSS selectors have been optimised.<br />
-The `.less` file is compiled on demand which should allow for UI customisations in a following release.
+- Complete rewrite of the extension for the final release of Komodo Edit/IDE 6.<br />
+- Compatibility with all versions on Windows (XP, Vista & 7)<br />
+- All CSS selectors have been optimised.<br />
+- The `.less` file is compiled on demand which should allow for UI customisations in a following release.

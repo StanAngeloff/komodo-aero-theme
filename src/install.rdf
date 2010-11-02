@@ -4,9 +4,9 @@
     <Description about="urn:mozilla:install-manifest">
         <em:id>aerotheme@psp-webtech.co.uk</em:id>
         <em:name>Aero Theme</em:name>
-        <em:description>A better Windows 7 Aero theme for Komodo Edit</em:description>
+        <em:description>A better Windows theme for Komodo Edit</em:description>
         <em:creator>Stan Angeloff</em:creator>
-        <em:version>0.5.1</em:version>
+        <em:version>0.5.2</em:version>
 		<em:type>2</em:type>
         <em:homepageURL>http://github.com/StanAngeloff/komodo-aero-theme</em:homepageURL>
         <em:iconURL>chrome://aerotheme/skin/icon.png</em:iconURL>
