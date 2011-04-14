@@ -20,6 +20,11 @@ You can also install Aero Theme from source. Follow the
 [Firefox extension proxy file](https://developer.mozilla.org/en/Setting_up_extension_development_environment#Firefox_extension_proxy_file)
 instructions. You can find your XRE/extensions directory path [in the docs](http://docs.activestate.com/komodo/5.0/trouble.html#appdata_dir).
 
+License
+=======
+
+In a hope to get this added directly into Komodo the [Mozilla Public License](http://www.mozilla.org/MPL/) is being used.
+
 Changelog
 =========
 
