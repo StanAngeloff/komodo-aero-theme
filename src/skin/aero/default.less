@@ -1,7 +1,7 @@
-@main_background:      #d1d6e6;
-@threed_background:    #e5e8ea;
-@selection_background: #c1dbfc;
-@highlight_color:      #ff9000;
+@main_background:        #d1d6e6;
+@threed_background:      #e5e8ea;
+@selection_background:   #c1dbfc;
+@highlight_color:        #ff9000;
 
 @fixed_font_family:    monaco, inconsolata, consolas, 'Lucida Console', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Courier New', Courier, monospace;
 
@@ -216,6 +216,7 @@ treechildren {
   }
 }
 
+// Everything Statusbar Related
 statusbar {
   -moz-appearance: none !important;
   background:      @main_background url('images/background-bottom-top-white-gradient.png') repeat-x 0 100% !important;
@@ -227,26 +228,81 @@ statusbar {
     padding:         0;
     border:          none;
     border-right:    1px solid rgba(0, 0, 0, 0.25);
-
+    
+    &#statusbar-section {
+      textbox {
+        -moz-appearance:none;
+        border:none;
+        margin:0 !important;
+      }
+    }
+    
+    &#statusbar-line-col {
+      display:box;
+      min-width: 0 !important;
+      padding-left:4px;
+      padding-right:4px;
+    }
+    
+    &#statusbar-language {
+      min-width: 0 !important;
+      max-width: 12em !important;
+      toolbarbutton {
+        padding-left:4px;
+        padding-right:4px;
+        .toolbarbutton-menu-dropmarker {
+          margin-left:4px;
+        }
+      }
+    }
+    
+    &#sync-status-button {
+      background-image: url('chrome://fugue/skin/icons/arrow-continue-270.png') !important;
+      background-repeat: no-repeat;
+      background-position:center center;
+      width:30px;
+      .statusbarpanel-icon {
+        list-style-image: url("chrome://fugue/skin/icons/arrow-continue-270.png");
+        display:none;
+      }
+    }
     toolbarbutton {
       min-width:           36px;
       padding:             3px 0 !important;
       -moz-border-radius:  0;
-
-      .toolbarbutton-text {
-        text-align: center;
+      
+      .toolbarbutton-icon {
+        display: none;
       }
-
+      
       dropmarker {
         margin-right: 4px;
         .dropmarker-icon {
-          list-style-image: url('images/icon-drop-marker-down.png');
+          list-style-image: url('images/icon-drop-marker-up.png');
         }
       }
 
       &[open="true"] {
         -moz-box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.25);
       }
+      
+      // Now you can see more of the langauges :D
+      menupopup {
+        -moz-appearance:none;
+        padding:1px;
+        background:#E5E8EA;
+        border:1px solid #ACAEAF;
+        menuitem {
+          .menu-iconic-text {
+            font-size:11px;
+          }
+          .menu-iconic-left {
+            -moz-appearance:none;
+            width:10px;
+          }
+        }
+      }
+      
     }
   }
 }
@@ -267,6 +323,26 @@ statusbar {
       -moz-image-region: rect(0px, @sprite_size * 3, @sprite_size, @sprite_size * 2) !important;
     }
   }
+}
+
+// Style Places
+ko-pane#workspace_left_area {
+  .tabs-closebutton {
+    padding:5px 0 0 0 !important;
+  }
+}
+
+// Style Toolbox
+ko-pane#workspace_right_area {
+  // Set Color
+  .pane-tabs-container {
+    background:red !important;
+  }
+  // Spacing on Close Button
+  .tabs-closebutton {
+    padding:5px 0 0 0 !important;
+  }
+  
 }
 
 // Style Tabs
@@ -327,7 +403,7 @@ tabbox {
         -moz-border-left-colors:  rgba(0, 0, 0, 0.25);
         text-shadow:              0 1px 0 rgba(255, 255, 255, 0.75);
       }
-
+      
       &[selected="true"] {
         background:               rgb(255, 255, 255);
         color:                    WindowText;
@@ -339,6 +415,7 @@ tabbox {
         margin-bottom:            0 !important;
         padding:                  2px 8px !important;
       }
+      
     }
   }
 }
