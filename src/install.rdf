@@ -5,7 +5,7 @@
         <em:id>aerotheme@psp-webtech.co.uk</em:id>
         <em:name>Aero Theme</em:name>
         <em:description>A better Windows theme for Komodo Edit</em:description>
-        <em:creator>Stan Angeloff</em:creator>
+        <em:creator>Stan Angeloff / Austin Andrews</em:creator>
         <em:version>0.5.2</em:version>
 		<em:type>2</em:type>
         <em:homepageURL>http://github.com/StanAngeloff/komodo-aero-theme</em:homepageURL>
@@ -15,8 +15,8 @@
         <em:targetApplication>
             <Description>
                 <em:id>{36E66FA0-F259-11D9-850E-000D935D3368}</em:id>
-                <em:minVersion>6.0.0-b3</em:minVersion>
-                <em:maxVersion>6.*</em:maxVersion>
+                <em:minVersion>7.0.0-a3</em:minVersion>
+                <em:maxVersion>7.*</em:maxVersion>
             </Description>
         </em:targetApplication>
 
@@ -24,8 +24,8 @@
         <em:targetApplication>
             <Description>
                 <em:id>{b1042fb5-9e9c-11db-b107-000d935d3368}</em:id>
-                <em:minVersion>6.0.0-b3</em:minVersion>
-                <em:maxVersion>6.*</em:maxVersion>
+                <em:minVersion>7.0.0-a3</em:minVersion>
+                <em:maxVersion>7.*</em:maxVersion>
             </Description>
         </em:targetApplication>
     </Description>

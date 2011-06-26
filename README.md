@@ -6,7 +6,7 @@ How to Install (stable)
 =======================
 
 - Download the XPI file from [ActiveState Komodo Extensions](http://community.activestate.com/xpi/aero-theme)
-- Fire up Komodo 6+
+- Fire up Komodo 7+
 - Select *Tools* → *Add-ons* → *Extensions*
 - Drag and drop the XPI file onto the *Add-ons* window
 - Wait and confirm the installation
