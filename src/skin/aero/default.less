@@ -229,11 +229,45 @@ statusbar {
     border:          none;
     border-right:    1px solid rgba(0, 0, 0, 0.25);
     
+    &#statusbar-checker {
+      toolbarbutton {
+        height:23px;
+        padding-left:8px;
+        padding-right:4px;
+        &.syntax-in-progress {
+          list-style-image:  url('images/icons-syntax.png') !important;
+          -moz-image-region: rect(0, 16px, 16px, 0);
+        }
+        &.syntax-warning {
+          list-style-image:  url('images/icons-syntax.png') !important;
+          -moz-image-region: rect(16px, 16px, 32px, 0);
+        }
+        &.syntax-error {
+          list-style-image:  url('images/icons-syntax.png') !important;
+          -moz-image-region: rect(32px, 16px, 48px, 0);
+        }
+        &.syntax-okay {
+          list-style-image:  url('images/icons-syntax.png') !important;
+          -moz-image-region: rect(48px, 16px, 64px, 0);
+        }
+      }
+    }
+    
     &#statusbar-section {
       textbox {
         -moz-appearance:none;
         border:none;
         margin:0 !important;
+      }
+    }
+    
+    &#statusbar-encoding {
+      toolbarbutton {
+        padding-left:4px;
+        padding-right:4px;
+        .toolbarbutton-menu-dropmarker {
+          margin-left:4px;
+        }
       }
     }
     
@@ -250,6 +284,9 @@ statusbar {
       toolbarbutton {
         padding-left:4px;
         padding-right:4px;
+        .toolbarbutton-icon {
+          display:none;
+        }
         .toolbarbutton-menu-dropmarker {
           margin-left:4px;
         }
@@ -266,14 +303,12 @@ statusbar {
         display:none;
       }
     }
+    
     toolbarbutton {
       min-width:           36px;
-      padding:             3px 0 !important;
+      padding-top:         3px !important;
+      padding-bottom:      3px !important;
       -moz-border-radius:  0;
-      
-      .toolbarbutton-icon {
-        display: none;
-      }
       
       dropmarker {
         margin-right: 4px;
@@ -296,9 +331,15 @@ statusbar {
           .menu-iconic-text {
             font-size:11px;
           }
+        }
+        menuitem[checked="true"] {
           .menu-iconic-left {
             -moz-appearance:none;
-            width:10px;
+            background-image:url('chrome://fugue/skin/icons/tick.png') !important;
+            background-repeat:no-repeat;
+            .menu-iconic-icon {
+              display:none;
+            }
           }
         }
       }
@@ -661,22 +702,6 @@ treechildren::-moz-tree-image(places_file) {
 }
 .history-forward-icon {
   list-style-image: url('images/icons-places-browser.png') !important;
-}
-.syntax-in-progress {
-  list-style-image:  url('images/icons-syntax.png') !important;
-  -moz-image-region: rect(0, 16px, 16px, 0);
-}
-.syntax-warning {
-  list-style-image:  url('images/icons-syntax.png') !important;
-  -moz-image-region: rect(16px, 16px, 32px, 0);
-}
-.syntax-error {
-  list-style-image:  url('images/icons-syntax.png') !important;
-  -moz-image-region: rect(32px, 16px, 48px, 0);
-}
-.syntax-okay {
-  list-style-image:  url('images/icons-syntax.png') !important;
-  -moz-image-region: rect(48px, 16px, 64px, 0);
 }
 
 // VIM UI
