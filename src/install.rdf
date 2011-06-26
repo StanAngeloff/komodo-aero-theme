@@ -2,11 +2,13 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
     <Description about="urn:mozilla:install-manifest">
-        <em:id>aerotheme@psp-webtech.co.uk</em:id>
+        <em:id>aero@templarian.com</em:id>
         <em:name>Aero Theme</em:name>
-        <em:description>A better Windows theme for Komodo Edit</em:description>
-        <em:creator>Stan Angeloff / Austin Andrews</em:creator>
-        <em:version>0.5.2</em:version>
+        <em:description>A better Windows theme for Komodo Edit / IDE</em:description>
+        <em:creator>Windows Users</em:creator>
+	<em:developer>Stan Angeloff</em:developer>
+	<em:developer>Austin Andrews</em:developer>
+        <em:version>0.7.0</em:version>
 		<em:type>2</em:type>
         <em:homepageURL>http://github.com/StanAngeloff/komodo-aero-theme</em:homepageURL>
         <em:iconURL>chrome://aerotheme/skin/icon.png</em:iconURL>
